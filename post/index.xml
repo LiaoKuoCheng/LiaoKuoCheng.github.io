@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Cheney&#39;s Blog</title>
+        <link>https://LiaoKuoCheng.github.io/post/</link>
+        <description>Recent content in Posts on Cheney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Cheney</copyright>
+        <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://LiaoKuoCheng.github.io/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>居家型健康檢測系統</title>
+        <link>https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/</link>
+        <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/</guid>
+        <description>&lt;h3 id=&#34;專題架構&#34;&gt;專題架構
+&lt;/h3&gt;&lt;p&gt;使用 Laudon 資訊管理系統 Modle 繪製出整個架構&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96.png&#34;
+	width=&#34;1018&#34;
+	height=&#34;505&#34;
+	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96_hu_76df1e3c04a6d6a0.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96_hu_e6145154f7336dea.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Laudon 資訊管理系統 Modle&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;201&#34;
+		data-flex-basis=&#34;483px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;專題成員&#34;&gt;專題成員
+&lt;/h3&gt;&lt;p&gt;廖國丞、吳則緯、陳士弘&lt;/p&gt;
+&lt;h3 id=&#34;韌體&#34;&gt;韌體
+&lt;/h3&gt;&lt;h3 id=&#34;影像辨識&#34;&gt;影像辨識
+&lt;/h3&gt;&lt;h3 id=&#34;資料接收與分析&#34;&gt;資料接收與分析
+&lt;/h3&gt;&lt;h3 id=&#34;成果展示&#34;&gt;成果展示
+&lt;/h3&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Cheney&#39;s Blog</title>
+        <link>https://LiaoKuoCheng.github.io/tags/</link>
+        <description>Recent content in Tags on Cheney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Cheney</copyright>
+        <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://LiaoKuoCheng.github.io/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>C#</title>
+        <link>https://LiaoKuoCheng.github.io/tags/c%23/</link>
+        <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://LiaoKuoCheng.github.io/tags/c%23/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Python</title>
+        <link>https://LiaoKuoCheng.github.io/tags/python/</link>
+        <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://LiaoKuoCheng.github.io/tags/python/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>STM32</title>
+        <link>https://LiaoKuoCheng.github.io/tags/stm32/</link>
+        <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://LiaoKuoCheng.github.io/tags/stm32/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>YoloV8</title>
+        <link>https://LiaoKuoCheng.github.io/tags/yolov8/</link>
+        <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://LiaoKuoCheng.github.io/tags/yolov8/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>
