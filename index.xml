@@ -65,8 +65,8 @@
         <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/about/</guid>
-        <description>&lt;h3 id=&#34;簡單介紹&#34;&gt;簡單介紹
-&lt;/h3&gt;&lt;p&gt;哈囉，大家好，我是 廖國丞(Liao Kuo-Cheng ,Cheney)，歡迎來到我的個人網站。&lt;/p&gt;
+        <description>&lt;h2 id=&#34;簡單介紹&#34;&gt;簡單介紹
+&lt;/h2&gt;&lt;p&gt;哈囉，大家好，我是 廖國丞(Liao Kuo-Cheng ,Cheney)，歡迎來到我的個人網站。&lt;/p&gt;
 &lt;p&gt;我來自台中，畢業於國立勤益科技大學資訊工程系（2025年）。&lt;/p&gt;
 &lt;p&gt;我平時的興趣主要聚焦在嵌入式單晶片（如 STM32）開發與滲透測試工具的研究，目前正努力培養自己成為一名專業的系統漏洞測試工程師。&lt;/p&gt;
 &lt;p&gt;由於這個職業所需的資訊技術涵蓋廣泛，因此我建立了這個平台，希望能與大家分享我學習與實作過程中所累積的技術與經驗。若您發現任何錯誤或有改進建議，歡迎透過留言區指教，我會盡快查證並修正。&lt;/p&gt;
@@ -74,8 +74,8 @@
 &lt;p&gt;I was born in Taichung, Taiwan, and I graduated from the Department of Computer Science and Information Engineering at National Chin-Yi University of Technology (NCUT) in 2025.&lt;/p&gt;
 &lt;p&gt;My main areas of interest include embedded microcontroller development (especially with STM32) and penetration testing tools. I am currently working toward becoming a professional system vulnerability testing engineer.&lt;/p&gt;
 &lt;p&gt;Because this field involves a wide range of technical skills, I created this platform to document and share what I’ve learned through study and practical experience. I’m also passionate about technology education and open collaboration. If you find any mistakes or have feedback, feel free to leave a comment — I’ll verify and improve the content as soon as possible.&lt;/p&gt;
-&lt;h3 id=&#34;我創建這個部落格主要有三個原因&#34;&gt;我創建這個部落格主要有三個原因：
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;我創建這個部落格主要有三個原因&#34;&gt;我創建這個部落格主要有三個原因：
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;分享學習&lt;/strong&gt;：我想把自己學到的知識、技巧和經歷，分享給大家，無論是同學、同行還是對技術有興趣的朋友，希望我們能共同學習。&lt;/p&gt;
 &lt;/li&gt;
@@ -86,18 +86,18 @@
 &lt;p&gt;&lt;strong&gt;深化理解&lt;/strong&gt;：寫文章幫助我整理思路，當我試圖解釋一些概念時，我會對這些知識有更深入的理解。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;社群平台&#34;&gt;社群平台
-&lt;/h3&gt;&lt;ul&gt;
+&lt;h2 id=&#34;社群平台&#34;&gt;社群平台
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://github.com/LiaoKuoCheng&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;&lt;strong&gt;GitHub&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://github.com/LiaoKuoCheng&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;@LiaoKuoCheng&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/csiecheng/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+&lt;p&gt;&lt;strong&gt;LinkedIn&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;https://www.linkedin.com/in/csiecheng/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Liao Kuo Cheng&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt; &lt;strong&gt;Email&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;mailto:csiecheng@gmail.com&#34; &gt;csiecheng@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Email&lt;/strong&gt;: &lt;a class=&#34;link&#34; href=&#34;mailto:csiecheng@gmail.com&#34; &gt;csiecheng@gmail.com&lt;/a&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 </description>
