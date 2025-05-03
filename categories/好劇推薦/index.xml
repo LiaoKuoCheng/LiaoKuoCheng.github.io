@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>好劇推薦 on Cheney&#39;s Blog</title>
+        <link>http://localhost:1313/categories/%E5%A5%BD%E5%8A%87%E6%8E%A8%E8%96%A6/</link>
+        <description>Recent content in 好劇推薦 on Cheney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Cheney</copyright>
+        <lastBuildDate>Fri, 02 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%A5%BD%E5%8A%87%E6%8E%A8%E8%96%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>【日劇】黑色止血鉗 1 &amp; 2</title>
+        <link>http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/</link>
+        <pubDate>Fri, 02 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/</guid>
+        <description>&lt;div class=&#34;video-wrapper&#34;&gt;
+    &lt;iframe loading=&#34;lazy&#34; 
+            src=&#34;https://www.youtube.com/embed/AHEqXtlxXmc&#34; 
+            allowfullscreen 
+            title=&#34;YouTube Video&#34;
+    &gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+        </item>
+        
+    </channel>
+</rss>
