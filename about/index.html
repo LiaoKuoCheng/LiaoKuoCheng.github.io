@@ -372,52 +372,56 @@
     
     <section id="comments">
         
-    <script src="https://utteranc.es/client.js" 
-        repo="LiaoKuoCheng/LiaoKuoCheng.github.io"
-        issue-term="pathname"
-        
-        label="💬 Comments"
-        
-        crossorigin="anonymous"
-        async>
-</script>
-
-<style>
-    .utterances {
-        max-width: unset;
-    }
-</style>
+    <style> 
+    .utterances { 
+        max-width: unset; 
+    } 
+</style> 
 
 <script>
-    let utterancesLoaded = false;
+    const script = document.createElement('script');
+    script.src = "https://utteranc.es/client.js";
+    script.setAttribute('repo', "LiaoKuoCheng\/LiaoKuoCheng.github.io");
+    script.setAttribute('issue-term', "pathname");
+    script.setAttribute('label', "💬 Comments");
+    script.setAttribute('theme', document.documentElement.dataset.scheme === 'dark' ? 'github-dark' : 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
 
-    function setUtterancesTheme(theme) {
-        let utterances = document.querySelector('.utterances iframe');
+    
+    if (!document.querySelector('.utterances')) {
+        document.body.appendChild(script);
+    }
+
+    
+    window.addEventListener('message', event => {
+        if (event.origin !== "https://utteranc.es") return;
+        const theme = document.documentElement.dataset.scheme || 'light';
+        const utterances = document.querySelector('.utterances iframe');
         if (utterances) {
             utterances.contentWindow.postMessage(
-                {
+                { 
                     type: 'set-theme',
                     theme: `github-${theme}`
                 },
-                'https://utteranc.es'
+                "https://utteranc.es"
             );
         }
-    }
-
-    addEventListener('message', event => {
-        if (event.origin !== 'https://utteranc.es') return;
-
-        
-        utterancesLoaded = true;
-        setUtterancesTheme(document.documentElement.dataset.scheme)
     });
 
     window.addEventListener('onColorSchemeChange', (e) => {
-        if (!utterancesLoaded) return;
-        setUtterancesTheme(e.detail)
-    })
+        const utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                { 
+                    type: 'set-theme',
+                    theme: `github-${e.detail || 'light'}`
+                },
+                "https://utteranc.es"
+            );
+        }
+    });
 </script>
-
 
     </section>
     
@@ -431,52 +435,56 @@
      
     
         
-    <script src="https://utteranc.es/client.js" 
-        repo="LiaoKuoCheng/LiaoKuoCheng.github.io"
-        issue-term="pathname"
-        
-        label="💬 Comments"
-        
-        crossorigin="anonymous"
-        async>
-</script>
-
-<style>
-    .utterances {
-        max-width: unset;
-    }
-</style>
+    <style> 
+    .utterances { 
+        max-width: unset; 
+    } 
+</style> 
 
 <script>
-    let utterancesLoaded = false;
+    const script = document.createElement('script');
+    script.src = "https://utteranc.es/client.js";
+    script.setAttribute('repo', "LiaoKuoCheng\/LiaoKuoCheng.github.io");
+    script.setAttribute('issue-term', "pathname");
+    script.setAttribute('label', "💬 Comments");
+    script.setAttribute('theme', document.documentElement.dataset.scheme === 'dark' ? 'github-dark' : 'github-light');
+    script.setAttribute('crossorigin', 'anonymous');
+    script.async = true;
 
-    function setUtterancesTheme(theme) {
-        let utterances = document.querySelector('.utterances iframe');
+    
+    if (!document.querySelector('.utterances')) {
+        document.body.appendChild(script);
+    }
+
+    
+    window.addEventListener('message', event => {
+        if (event.origin !== "https://utteranc.es") return;
+        const theme = document.documentElement.dataset.scheme || 'light';
+        const utterances = document.querySelector('.utterances iframe');
         if (utterances) {
             utterances.contentWindow.postMessage(
-                {
+                { 
                     type: 'set-theme',
                     theme: `github-${theme}`
                 },
-                'https://utteranc.es'
+                "https://utteranc.es"
             );
         }
-    }
-
-    addEventListener('message', event => {
-        if (event.origin !== 'https://utteranc.es') return;
-
-        
-        utterancesLoaded = true;
-        setUtterancesTheme(document.documentElement.dataset.scheme)
     });
 
     window.addEventListener('onColorSchemeChange', (e) => {
-        if (!utterancesLoaded) return;
-        setUtterancesTheme(e.detail)
-    })
+        const utterances = document.querySelector('.utterances iframe');
+        if (utterances) {
+            utterances.contentWindow.postMessage(
+                { 
+                    type: 'set-theme',
+                    theme: `github-${e.detail || 'light'}`
+                },
+                "https://utteranc.es"
+            );
+        }
+    });
 </script>
-
 
     
 
