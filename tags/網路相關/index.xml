@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>網路相關 on Cheney&#39;s Blog</title>
+        <link>http://localhost:1313/tags/%E7%B6%B2%E8%B7%AF%E7%9B%B8%E9%97%9C/</link>
+        <description>Recent content in 網路相關 on Cheney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-tw</language>
+        <copyright>Cheney</copyright>
+        <lastBuildDate>Tue, 13 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E7%B6%B2%E8%B7%AF%E7%9B%B8%E9%97%9C/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>網路通訊概念</title>
+        <link>http://localhost:1313/p/%E7%B6%B2%E8%B7%AF%E9%80%9A%E8%A8%8A%E6%A6%82%E5%BF%B5/</link>
+        <pubDate>Tue, 13 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://localhost:1313/p/%E7%B6%B2%E8%B7%AF%E9%80%9A%E8%A8%8A%E6%A6%82%E5%BF%B5/</guid>
+        <description>&lt;h2 id=&#34;傳輸訊號&#34;&gt;傳輸訊號
+&lt;/h2&gt;&lt;p&gt;訊號型態分為&lt;strong&gt;類比&lt;/strong&gt;與&lt;strong&gt;數位&lt;/strong&gt;
+&lt;strong&gt;類比訊號 :&lt;/strong&gt; 屬於連續性的，像是人講話的聲音。
+&lt;strong&gt;數位訊號 :&lt;/strong&gt; 屬於階段性的，像是數位電腦的高低訊號。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
