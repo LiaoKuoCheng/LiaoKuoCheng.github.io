@@ -17,12 +17,11 @@
     &gt;10812 - Beat the Spread!&lt;/a&gt;
 &lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;其實就是在解此方程式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;x + y = a
+&lt;li&gt;其實就是在解此方程式
+x + y = a
 x - y = b
-x : (x + y ) / 2  , y : (x - y) / 2&lt;/p&gt;&lt;/blockquote&gt;
+=&amp;gt; x : (x + y ) / 2  , y : (x - y) / 2&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
 &lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
