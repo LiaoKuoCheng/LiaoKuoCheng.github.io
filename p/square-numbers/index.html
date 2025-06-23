@@ -3,18 +3,18 @@
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="題目連結 : 11461 - Square Numbers 解題思路 判斷平方樹有幾個 使用boolean方式去判斷 用陣列方式，把相乘起來地方標示 true 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int num = 100001; boolean tables[] = new boolean[num]; for(int i = 1; i * i &lt; num; i++){ tables[i * i] = true; } while(sc.hasNext()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int count = 0; for(int i = a; i &lt;= b ; i++){ if(tables[i]){ count += 1; }\t} System.out.println(count); } } } ">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="題目連結 : 11461 - Square Numbers 解題思路 判斷平方樹有幾個 使用boolean方式去判斷 用陣列方式，把相乘起來地方標示 true 以下是解題關鍵 : 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int num = 100001; boolean tables[] = new boolean[num]; for(int i = 1; i * i &lt; num; i++){ tables[i * i] = true; } while(sc.hasNext()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int count = 0; for(int i = a; i &lt;= b ; i++){ if(tables[i]){ count += 1; }\t} System.out.println(count); } } } ">
 <title>Square Numbers</title>
 
 <link rel='canonical' href='https://LiaoKuoCheng.github.io/p/square-numbers/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Square Numbers">
-<meta property='og:description' content="題目連結 : 11461 - Square Numbers 解題思路 判斷平方樹有幾個 使用boolean方式去判斷 用陣列方式，把相乘起來地方標示 true 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int num = 100001; boolean tables[] = new boolean[num]; for(int i = 1; i * i &lt; num; i++){ tables[i * i] = true; } while(sc.hasNext()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int count = 0; for(int i = a; i &lt;= b ; i++){ if(tables[i]){ count += 1; }\t} System.out.println(count); } } } ">
+<meta property='og:description' content="題目連結 : 11461 - Square Numbers 解題思路 判斷平方樹有幾個 使用boolean方式去判斷 用陣列方式，把相乘起來地方標示 true 以下是解題關鍵 : 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int num = 100001; boolean tables[] = new boolean[num]; for(int i = 1; i * i &lt; num; i++){ tables[i * i] = true; } while(sc.hasNext()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int count = 0; for(int i = a; i &lt;= b ; i++){ if(tables[i]){ count += 1; }\t} System.out.println(count); } } } ">
 <meta property='og:url' content='https://LiaoKuoCheng.github.io/p/square-numbers/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CPE' /><meta property='article:published_time' content='2025-06-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-06-20T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Square Numbers">
-<meta name="twitter:description" content="題目連結 : 11461 - Square Numbers 解題思路 判斷平方樹有幾個 使用boolean方式去判斷 用陣列方式，把相乘起來地方標示 true 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int num = 100001; boolean tables[] = new boolean[num]; for(int i = 1; i * i &lt; num; i++){ tables[i * i] = true; } while(sc.hasNext()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int count = 0; for(int i = a; i &lt;= b ; i++){ if(tables[i]){ count += 1; }\t} System.out.println(count); } } } ">
+<meta name="twitter:description" content="題目連結 : 11461 - Square Numbers 解題思路 判斷平方樹有幾個 使用boolean方式去判斷 用陣列方式，把相乘起來地方標示 true 以下是解題關鍵 : 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int num = 100001; boolean tables[] = new boolean[num]; for(int i = 1; i * i &lt; num; i++){ tables[i * i] = true; } while(sc.hasNext()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int count = 0; for(int i = a; i &lt;= b ; i++){ if(tables[i]){ count += 1; }\t} System.out.println(count); } } } ">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-35BXZW16ZN"></script>
@@ -351,6 +351,7 @@
 <li>判斷平方樹有幾個</li>
 <li>使用boolean方式去判斷</li>
 <li>用陣列方式，把相乘起來地方標示 true</li>
+<li>以下是解題關鍵 :</li>
 </ul>
 <p><img src="/p/square-numbers/YKL07_1.png"
 	width="403"
@@ -358,15 +359,13 @@
 	srcset="/p/square-numbers/YKL07_1_hu_1d7c5294a0b2a4d6.png 480w, /p/square-numbers/YKL07_1_hu_f2c433ce268be1db.png 1024w"
 	loading="lazy"
 	
-		alt="解題關鍵"
-	
 	
 		class="gallery-image" 
 		data-flex-grow="552"
 		data-flex-basis="1324px"
 	
->
-<img src="/p/square-numbers/YKL07_2.png"
+></p>
+<p><img src="/p/square-numbers/YKL07_2.png"
 	width="754"
 	height="246"
 	srcset="/p/square-numbers/YKL07_2_hu_c9d482e21451ffd4.png 480w, /p/square-numbers/YKL07_2_hu_fb7f46fd39b5121f.png 1024w"

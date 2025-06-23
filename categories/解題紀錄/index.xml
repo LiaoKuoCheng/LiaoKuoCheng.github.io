@@ -7,7 +7,62 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>Cheney</copyright>
-        <lastBuildDate>Fri, 20 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://LiaoKuoCheng.github.io/categories/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 23 Jun 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://LiaoKuoCheng.github.io/categories/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The 3n &#43; 1 problem</title>
+        <link>https://LiaoKuoCheng.github.io/p/the-3n--1-problem/</link>
+        <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
+        
+        <guid>https://LiaoKuoCheng.github.io/p/the-3n--1-problem/</guid>
+        <description>&lt;h3 id=&#34;題目連結--100---the-3n--1-problem&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/external/1/100.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;100 - The 3n + 1 problem&lt;/a&gt;
+&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;將數字帶入演算法，算出數列中有幾個數字&lt;/li&gt;
+&lt;li&gt;前兩個數字是題目輸入的，第三個是數列有幾個數字&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextInt&lt;/span&gt;()){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(n &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; m){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; temp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; m;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; temp;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; m; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1; &lt;span style=&#34;color:#75715e&#34;&gt;// 計算數列數字&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 1){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						number &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; 2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 3 &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; max){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; count;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(max);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Square Numbers</title>
         <link>https://LiaoKuoCheng.github.io/p/square-numbers/</link>
         <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
@@ -20,6 +75,7 @@
 &lt;li&gt;判斷平方樹有幾個&lt;/li&gt;
 &lt;li&gt;使用boolean方式去判斷&lt;/li&gt;
 &lt;li&gt;用陣列方式，把相乘起來地方標示 true&lt;/li&gt;
+&lt;li&gt;以下是解題關鍵 :&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/square-numbers/YKL07_1.png&#34;
 	width=&#34;403&#34;
@@ -27,15 +83,13 @@
 	srcset=&#34;https://LiaoKuoCheng.github.io/p/square-numbers/YKL07_1_hu_1d7c5294a0b2a4d6.png 480w, https://LiaoKuoCheng.github.io/p/square-numbers/YKL07_1_hu_f2c433ce268be1db.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;解題關鍵&#34;
-	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;552&#34;
 		data-flex-basis=&#34;1324px&#34;
 	
-&gt;
-&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/square-numbers/YKL07_2.png&#34;
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/square-numbers/YKL07_2.png&#34;
 	width=&#34;754&#34;
 	height=&#34;246&#34;
 	srcset=&#34;https://LiaoKuoCheng.github.io/p/square-numbers/YKL07_2_hu_c9d482e21451ffd4.png 480w, https://LiaoKuoCheng.github.io/p/square-numbers/YKL07_2_hu_fb7f46fd39b5121f.png 1024w&#34;
