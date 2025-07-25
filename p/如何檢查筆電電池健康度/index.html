@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-tw" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="為什麼會有這個動機? 平常用筆電都是插著電源，沒有特別在意它的續航力，畢竟我是用電競筆電（MSI GL75 10SCSK）。但這禮拜發現一拔掉電源線，電腦就直接關機，才驚覺可能是電池出問題了。\n檢查後發現電池容量一直維持在 6%，於是開始查詢電池健康度的檢查方式，也想記錄下來這次經驗，放在 blog 與大家分享。\n電池健康度是什麼？ 電池健康度（Battery Health）是指「目前可充電容量」與「出廠設計容量」的比值。\n舉例來說：\n電池原始容量（Design Capacity）：60,000 mWh 目前容量（Full Charge Capacity）：12,000 mWh 電池健康度計算 : 12,000 / 60,000 ≒ 20% 也就是說，雖然顯示 100% 充飽，但實際電量僅為當初的 20%。\n如何查詢筆電健康度？ 📌 步驟一： win + s 搜尋 &quot; cmd &quot; ， &quot; 以系統管理員身分執行 &quot; 📌 步驟二： 輸入此指令 : &quot; powercfg/batteryreport &quot; 📌 步驟三: 依照產生報告位置，打開報告 ">
+<title>如何檢查筆電電池健康度?</title>
+
+<link rel='canonical' href='https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="如何檢查筆電電池健康度?">
+<meta property='og:description' content="為什麼會有這個動機? 平常用筆電都是插著電源，沒有特別在意它的續航力，畢竟我是用電競筆電（MSI GL75 10SCSK）。但這禮拜發現一拔掉電源線，電腦就直接關機，才驚覺可能是電池出問題了。\n檢查後發現電池容量一直維持在 6%，於是開始查詢電池健康度的檢查方式，也想記錄下來這次經驗，放在 blog 與大家分享。\n電池健康度是什麼？ 電池健康度（Battery Health）是指「目前可充電容量」與「出廠設計容量」的比值。\n舉例來說：\n電池原始容量（Design Capacity）：60,000 mWh 目前容量（Full Charge Capacity）：12,000 mWh 電池健康度計算 : 12,000 / 60,000 ≒ 20% 也就是說，雖然顯示 100% 充飽，但實際電量僅為當初的 20%。\n如何查詢筆電健康度？ 📌 步驟一： win + s 搜尋 &quot; cmd &quot; ， &quot; 以系統管理員身分執行 &quot; 📌 步驟二： 輸入此指令 : &quot; powercfg/batteryreport &quot; 📌 步驟三: 依照產生報告位置，打開報告 ">
+<meta property='og:url' content='https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/'>
+<meta property='og:site_name' content='Cheney&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='電池健康度' /><meta property='article:tag' content='硬體' /><meta property='article:published_time' content='2025-07-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="如何檢查筆電電池健康度?">
+<meta name="twitter:description" content="為什麼會有這個動機? 平常用筆電都是插著電源，沒有特別在意它的續航力，畢竟我是用電競筆電（MSI GL75 10SCSK）。但這禮拜發現一拔掉電源線，電腦就直接關機，才驚覺可能是電池出問題了。\n檢查後發現電池容量一直維持在 6%，於是開始查詢電池健康度的檢查方式，也想記錄下來這次經驗，放在 blog 與大家分享。\n電池健康度是什麼？ 電池健康度（Battery Health）是指「目前可充電容量」與「出廠設計容量」的比值。\n舉例來說：\n電池原始容量（Design Capacity）：60,000 mWh 目前容量（Full Charge Capacity）：12,000 mWh 電池健康度計算 : 12,000 / 60,000 ≒ 20% 也就是說，雖然顯示 100% 充飽，但實際電量僅為當初的 20%。\n如何查詢筆電健康度？ 📌 步驟一： win + s 搜尋 &quot; cmd &quot; ， &quot; 以系統管理員身分執行 &quot; 📌 步驟二： 輸入此指令 : &quot; powercfg/batteryreport &quot; 📌 步驟三: 依照產生報告位置，打開報告 ">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-35BXZW16ZN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-35BXZW16ZN');
+</script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切換選單">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_505f967392fb9c2c.jpg" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Cheney&#39;s Blog</a></h1>
+            <h2 class="site-description">紀錄著 Cheney 在網路世界的學習心得與技術分享</h2>
+        </div>
+    </header><ol class="menu-social">
+            
+                <li>
+                    <a 
+                        href='https://github.com/LiaoKuoCheng'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='https://www.linkedin.com/in/csiecheng/'
+                        target="_blank"
+                        title="LinkedIn"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        
+                    </a>
+                </li>
+            
+                <li>
+                    <a 
+                        href='mailto:csiecheng@gmail.com'
+                        target="_blank"
+                        title="Email"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>About</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>Archives</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>Search</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>夜晚模式</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目錄</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#為什麼會有這個動機">為什麼會有這個動機?</a></li>
+    <li><a href="#電池健康度是什麼">電池健康度是什麼？</a></li>
+    <li><a href="#如何查詢筆電健康度">如何查詢筆電健康度？</a>
+      <ul>
+        <li><a href="#-步驟一-win--s-搜尋--cmd----以系統管理員身分執行-">📌 步驟一： win + s 搜尋 &quot; cmd &quot; ， &quot; 以系統管理員身分執行 &quot;</a></li>
+        <li><a href="#-步驟二-輸入此指令---powercfgbatteryreport-">📌 步驟二： 輸入此指令 : &quot; powercfg/batteryreport &quot;</a></li>
+        <li><a href="#-步驟三-依照產生報告位置打開報告">📌 步驟三: 依照產生報告位置，打開報告</a></li>
+        <li><a href="#即可看到電池目前狀態">即可看到電池目前狀態</a></li>
+      </ul>
+    </li>
+    <li><a href="#是否更換電池-">是否更換電池 ?</a>
+      <ul>
+        <li><a href="#電池健康度趴數對應狀況">電池健康度趴數對應狀況</a></li>
+      </ul>
+    </li>
+    <li><a href="#小結">小結</a></li>
+    <li><a href="#參考資料">參考資料</a></li>
+  </ul>
+</nav>
+        </div>
+    </section>
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E9%9B%BB%E8%85%A6%E7%9B%B8%E9%97%9C/" >
+                電腦相關
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/">如何檢查筆電電池健康度?</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 25, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    閱讀時間: 1 分鐘
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="為什麼會有這個動機">為什麼會有這個動機?
+</h2><p>平常用筆電都是插著電源，沒有特別在意它的續航力，畢竟我是用電競筆電（MSI GL75 10SCSK）。但這禮拜發現一拔掉電源線，電腦就直接關機，才驚覺可能是電池出問題了。</p>
+<p>檢查後發現電池容量一直維持在 6%，於是開始查詢電池健康度的檢查方式，也想記錄下來這次經驗，放在 blog 與大家分享。</p>
+<h2 id="電池健康度是什麼">電池健康度是什麼？
+</h2><p>電池健康度（Battery Health）是指「目前可充電容量」與「出廠設計容量」的比值。</p>
+<p>舉例來說：</p>
+<ul>
+<li><strong>電池原始容量（Design Capacity）</strong>：60,000 mWh</li>
+<li><strong>目前容量（Full Charge Capacity）</strong>：12,000 mWh</li>
+<li><strong>電池健康度計算</strong> : 12,000 / 60,000 ≒ <strong>20%</strong></li>
+</ul>
+<p>也就是說，雖然顯示 100% 充飽，但實際電量僅為當初的 20%。</p>
+<h2 id="如何查詢筆電健康度">如何查詢筆電健康度？
+</h2><h3 id="-步驟一-win--s-搜尋--cmd----以系統管理員身分執行-">📌 步驟一： win + s 搜尋 &quot; cmd &quot; ， &quot; 以系統管理員身分執行 &quot;
+</h3><p><img src="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2.png"
+	width="766"
+	height="725"
+	srcset="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_dc7dba1813ce6fa9.png 480w, /p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_ca282d9d063b132b.png 1024w"
+	loading="lazy"
+	
+		alt="cmd開啟方式"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="105"
+		data-flex-basis="253px"
+	
+></p>
+<h3 id="-步驟二-輸入此指令---powercfgbatteryreport-">📌 步驟二： 輸入此指令 : &quot; powercfg/batteryreport &quot;
+</h3><p><img src="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport.png"
+	width="963"
+	height="503"
+	srcset="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_4de2de1b62c515fc.png 480w, /p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_f39a8b6d77cae7b2.png 1024w"
+	loading="lazy"
+	
+		alt="電池健康度指令"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="191"
+		data-flex-basis="459px"
+	
+></p>
+<h3 id="-步驟三-依照產生報告位置打開報告">📌 步驟三: 依照產生報告位置，打開報告
+</h3><p><img src="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report.png"
+	width="979"
+	height="512"
+	srcset="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_1eccf8ef6a7bb9ca.png 480w, /p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_707db983d8f46a1c.png 1024w"
+	loading="lazy"
+	
+		alt="報告位置"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="191"
+		data-flex-basis="458px"
+	
+></p>
+<h3 id="即可看到電池目前狀態">即可看到電池目前狀態
+</h3><p><img src="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A.png"
+	width="660"
+	height="682"
+	srcset="/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_64593aa34eb838f1.png 480w, /p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_97b4faed86773cbf.png 1024w"
+	loading="lazy"
+	
+		alt="電池報告"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="96"
+		data-flex-basis="232px"
+	
+></p>
+<h2 id="是否更換電池-">是否更換電池 ?
+</h2><p>電池通常低於出廠值80%，需要更換電池，以上圖電腦為例子 :</p>
+<ul>
+<li>
+<p>Design Capacity：41,407 mWh</p>
+</li>
+<li>
+<p>Full Charge Capacity：13,403 mWh</p>
+</li>
+<li>
+<p>健康度計算：13,403 ÷ 41,407 ≒ 32%</p>
+</li>
+<li>
+<p>計算結果： 電池健康度僅約 32%，代表僅剩約三分之一壽命，建議儘快更換</p>
+</li>
+</ul>
+<h3 id="電池健康度趴數對應狀況">電池健康度趴數對應狀況
+</h3><div class="table-wrapper"><table>
+  <thead>
+      <tr>
+          <th>電池健康度範圍</th>
+          <th>狀況說明</th>
+          <th>建議行動</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>90% ～ 100%</td>
+          <td>健康狀態佳</td>
+          <td>繼續使用即可</td>
+      </tr>
+      <tr>
+          <td>70% ～ 89%</td>
+          <td>輕微老化</td>
+          <td>留意使用習慣</td>
+      </tr>
+      <tr>
+          <td>50% ～ 69%</td>
+          <td>顯著老化</td>
+          <td>可考慮更換</td>
+      </tr>
+      <tr>
+          <td>30% ～ 49%</td>
+          <td>嚴重衰退</td>
+          <td>建議更換</td>
+      </tr>
+      <tr>
+          <td>小於 30%</td>
+          <td>幾乎失效</td>
+          <td>儘快更換</td>
+      </tr>
+  </tbody>
+</table></div>
+<h2 id="小結">小結
+</h2><p>這次經驗讓我體認到，即使平常習慣插電使用筆電，也不能忽視電池的狀況。一顆健康的電池不僅關係到行動使用的便利性，更可能在突然斷電時保護系統資料不致遺失。</p>
+<p>建議定期檢查電池健康度，並適時進行充放電循環，以延長電池壽命。如果你也是長期插電使用的用戶，不妨花幾分鐘產生一份電池報告，了解一下你的筆電電池還是否處於健康狀態吧！</p>
+<h2 id="參考資料">參考資料
+</h2><p><a class="link" href="https://www.erpking.com.tw/articlesContent.php?id=19"  target="_blank" rel="noopener"
+    >了解筆電電池健康度:壽命、健康度查詢與更換指南</a></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/">電池健康度</a>
+        
+            <a href="/tags/%E7%A1%AC%E9%AB%94/">硬體</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+
+    
+    <section id="comments">
+        
+    
+    
+    
+    <style>  
+        .utterances {  
+            max-width: unset;  
+        }  
+    </style>  
+    
+    <script 
+        src="https://utteranc.es/client.js"
+        repo="LiaoKuoCheng/LiaoKuoCheng.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+
+    </section>
+    
+
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2025 Cheney
+    </section>
+
+    <section class="powerby">
+        使用 <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> 建立 <br />
+        主題 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 設計
+    </section>
+    
+    <section class="social-icons">
+        <a href="https://github.com/LiaoKuoCheng" target="_blank" rel="noopener" aria-label="github" style="margin: 0 5px;">
+            <i class="fab fa-github" style="font-size: 24px;"></i>
+        </a>
+
+        <a href="https://www.linkedin.com/in/liaokuo-cheng/" target="_blank" rel="noopener" aria-label="linkedin" style="margin: 0 5px;">
+            <i class="fab fa-linkedin" style="font-size: 24px;"></i>
+        </a>
+        
+        <a href="mailto:csiecheng@gmail.com" target="_blank" rel="noopener" aria-label="email" style="margin: 0 5px;">
+            <i class="fas fa-envelope" style="font-size: 24px;"></i>
+        </a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
