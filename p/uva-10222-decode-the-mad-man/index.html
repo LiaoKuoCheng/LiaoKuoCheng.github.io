@@ -258,13 +258,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ul>
-    <li>
-      <ul>
-        <li><a href="#題目連結--10222---decode-the-mad-man">題目連結 : <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=14&amp;page=show_problem&amp;problem=1163">10222 - Decode the Mad man</a></a></li>
-        <li><a href="#解題思路">解題思路</a></li>
-        <li><a href="#參考解答java">參考解答(JAVA)</a></li>
-      </ul>
-    </li>
+    <li><a href="#題目連結--10222---decode-the-mad-man">題目連結 : <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=14&amp;page=show_problem&amp;problem=1163">10222 - Decode the Mad man</a></a></li>
+    <li><a href="#解題思路">解題思路</a></li>
+    <li><a href="#參考解答java">參考解答(JAVA)</a></li>
   </ul>
 </nav>
         </div>
@@ -344,18 +340,18 @@
     <section class="article-content">
     
     
-    <h3 id="題目連結--10222---decode-the-mad-man">題目連結 : <a class="link" href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=14&amp;page=show_problem&amp;problem=1163"  target="_blank" rel="noopener"
+    <h2 id="題目連結--10222---decode-the-mad-man">題目連結 : <a class="link" href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;category=14&amp;page=show_problem&amp;problem=1163"  target="_blank" rel="noopener"
     >10222 - Decode the Mad man</a>
-</h3><h3 id="解題思路">解題思路
-</h3><ul>
+</h2><h2 id="解題思路">解題思路
+</h2><ul>
 <li>建立鍵盤</li>
 <li>charAt() 把字串逐一排查</li>
 <li>indexOf() 找出字元在鍵盤的位置，因為題目是左移兩格，所以必須-2才可順利解碼</li>
 <li>charAt() &mdash;&gt; 知道「位置」，想找尋 「字元」</li>
 <li>indexOf() &mdash;&gt; 知道「字元」，想找尋 「位置」，傳回 -1 表示找不到</li>
 </ul>
-<h3 id="參考解答java">參考解答(JAVA)
-</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+<h2 id="參考解答java">參考解答(JAVA)
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">main</span>{
 </span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String args<span style="color:#f92672">[]</span>){

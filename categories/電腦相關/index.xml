@@ -99,7 +99,8 @@
 &lt;p&gt;健康度計算：13,403 ÷ 41,407 ≒ 32%&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;計算結果： 電池健康度僅約 32%，代表僅剩約三分之一壽命，建議儘快更換&lt;/p&gt;
+&lt;p&gt;計算結果： 電池健康度僅約 32% &amp;mdash;&amp;gt; 嚴重衰退
+代表僅剩約三分之一壽命，建議儘快更換&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;電池健康度趴數對應狀況&#34;&gt;電池健康度趴數對應狀況
@@ -139,6 +140,22 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h3 id=&#34;電池更換後結果圖&#34;&gt;電池更換後結果圖
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;replacebattery.png&#34; &gt;電池更換後報告&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Design Capacity：48,840 mWh&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Full Charge Capacity：48,840 mWh&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;健康度計算：48,840 ÷ 48,840 ≒ 100% &amp;mdash;&amp;gt; 健康狀態佳&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;計算結果： 電池健康度僅約 32%，代表僅剩約三分之一壽命，建議儘快更換&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;小結&#34;&gt;小結
 &lt;/h2&gt;&lt;p&gt;這次經驗讓我體認到，即使平常習慣插電使用筆電，也不能忽視電池的狀況。一顆健康的電池不僅關係到行動使用的便利性，更可能在突然斷電時保護系統資料不致遺失。&lt;/p&gt;
 &lt;p&gt;建議定期檢查電池健康度，並適時進行充放電循環，以延長電池壽命。如果你也是長期插電使用的用戶，不妨花幾分鐘產生一份電池報告，了解一下你的筆電電池還是否處於健康狀態吧！&lt;/p&gt;

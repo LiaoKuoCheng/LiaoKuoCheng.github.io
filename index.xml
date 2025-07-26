@@ -99,7 +99,8 @@
 &lt;p&gt;健康度計算：13,403 ÷ 41,407 ≒ 32%&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;計算結果： 電池健康度僅約 32%，代表僅剩約三分之一壽命，建議儘快更換&lt;/p&gt;
+&lt;p&gt;計算結果： 電池健康度僅約 32% &amp;mdash;&amp;gt; 嚴重衰退
+代表僅剩約三分之一壽命，建議儘快更換&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;電池健康度趴數對應狀況&#34;&gt;電池健康度趴數對應狀況
@@ -139,6 +140,22 @@
       &lt;/tr&gt;
   &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;h3 id=&#34;電池更換後結果圖&#34;&gt;電池更換後結果圖
+&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;replacebattery.png&#34; &gt;電池更換後報告&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Design Capacity：48,840 mWh&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Full Charge Capacity：48,840 mWh&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;健康度計算：48,840 ÷ 48,840 ≒ 100% &amp;mdash;&amp;gt; 健康狀態佳&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;計算結果： 電池健康度僅約 32%，代表僅剩約三分之一壽命，建議儘快更換&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;小結&#34;&gt;小結
 &lt;/h2&gt;&lt;p&gt;這次經驗讓我體認到，即使平常習慣插電使用筆電，也不能忽視電池的狀況。一顆健康的電池不僅關係到行動使用的便利性，更可能在突然斷電時保護系統資料不致遺失。&lt;/p&gt;
 &lt;p&gt;建議定期檢查電池健康度，並適時進行充放電循環，以延長電池壽命。如果你也是長期插電使用的用戶，不妨花幾分鐘產生一份電池報告，了解一下你的筆電電池還是否處於健康狀態吧！&lt;/p&gt;
@@ -153,18 +170,18 @@
         <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10222-decode-the-mad-man/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10222---decode-the-mad-man&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=14&amp;amp;page=show_problem&amp;amp;problem=1163&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10222---decode-the-mad-man&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=14&amp;amp;page=show_problem&amp;amp;problem=1163&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10222 - Decode the Mad man&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;建立鍵盤&lt;/li&gt;
 &lt;li&gt;charAt() 把字串逐一排查&lt;/li&gt;
 &lt;li&gt;indexOf() 找出字元在鍵盤的位置，因為題目是左移兩格，所以必須-2才可順利解碼&lt;/li&gt;
 &lt;li&gt;charAt() &amp;mdash;&amp;gt; 知道「位置」，想找尋 「字元」&lt;/li&gt;
 &lt;li&gt;indexOf() &amp;mdash;&amp;gt; 知道「字元」，想找尋 「位置」，傳回 -1 表示找不到&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -198,10 +215,10 @@
         <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10929-you-can-say-11/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10929---you-can-say-11&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=21&amp;amp;page=show_problem&amp;amp;problem=1870&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10929---you-can-say-11&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=21&amp;amp;page=show_problem&amp;amp;problem=1870&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10929 - You can say 11&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;判斷是否為 11 倍數&lt;/li&gt;
 &lt;li&gt;分出 奇數 與 偶數&lt;/li&gt;
 &lt;li&gt;奇數 - 偶數 mod 11 判斷是否為 11 倍數&lt;/li&gt;
@@ -210,8 +227,8 @@
 &lt;li&gt;even : 2  &amp;mdash;&amp;gt; 2&lt;/li&gt;
 &lt;li&gt;(odd - even) % 11 = 0 % 11 = 0 可被 11 整除，所以是 11 倍數&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -249,15 +266,15 @@
         <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10170-the-hotel-with-infinite-rooms/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10170---the-hotel-with-infinite-rooms&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=13&amp;amp;page=show_problem&amp;amp;problem=1111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10170---the-hotel-with-infinite-rooms&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=13&amp;amp;page=show_problem&amp;amp;problem=1111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10170 - The Hotel with Infinite Rooms&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;若累積入住人數 &amp;gt; 入住日 可知道 團體人數&lt;/li&gt;
 &lt;li&gt;入住日與累積人數要設定為 long 因為題目測資關係&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -286,14 +303,14 @@
         <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10035-primary-arithmetic/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10035---primary-arithmetic&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/external/100/10035.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10035---primary-arithmetic&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/external/100/10035.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10035 - Primary Arithmetic&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;善用 / 與 %&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -342,17 +359,17 @@
         <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-12019-dooms-day-algorithm/</guid>
-        <description>&lt;h3 id=&#34;題目連結--12019---doom&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=242&amp;amp;page=show_problem&amp;amp;problem=3170&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--12019---doom&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=242&amp;amp;page=show_problem&amp;amp;problem=3170&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;12019 - Doom&amp;rsquo;s Day Algorithm&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;以2009年為例子，算出星期幾&lt;/li&gt;
 &lt;li&gt;第一個迴圈 : 扣除這個月總共有幾天&lt;/li&gt;
 &lt;li&gt;扣除部分 + 天數 = 總共天數&lt;/li&gt;
 &lt;li&gt;總共天數 mod 7 就知道星期幾了&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -390,16 +407,16 @@
         <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10931-parity/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10931---parity&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=onlinejudge&amp;amp;page=show_problem&amp;amp;problem=1872&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10931---parity&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=onlinejudge&amp;amp;page=show_problem&amp;amp;problem=1872&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10931 - Parity&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;先將整數轉為二進制  &amp;mdash;&amp;ndash;&amp;gt; 利用 JAVA 的 Integer.toString() 方法&lt;/li&gt;
 &lt;li&gt;利用 for 迴圈搭配 charAt 逐一取出字串&lt;/li&gt;
 &lt;li&gt;如果是 1 ，加 1&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -433,15 +450,15 @@
         <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-100-the-3n--1-problem/</guid>
-        <description>&lt;h3 id=&#34;題目連結--100---the-3n--1-problem&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/external/1/100.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--100---the-3n--1-problem&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/external/1/100.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;100 - The 3n + 1 problem&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;將數字帶入演算法，算出數列中有幾個數字&lt;/li&gt;
 &lt;li&gt;前兩個數字是題目輸入的，第三個是數列有幾個數字&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -488,10 +505,10 @@
         <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/</guid>
-        <description>&lt;h3 id=&#34;題目連結--11461---square-numbers&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=2456&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--11461---square-numbers&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=2456&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;11461 - Square Numbers&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;判斷平方樹有幾個&lt;/li&gt;
 &lt;li&gt;使用boolean方式去判斷&lt;/li&gt;
 &lt;li&gt;用陣列方式，把相乘起來地方標示 true&lt;/li&gt;
@@ -521,8 +538,8 @@
 		data-flex-basis=&#34;735px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -561,15 +578,15 @@
         <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10190-divide-but-not-quite-conquer/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10190---divide-but-not-quiter-conquer&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1131&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10190---divide-but-not-quiter-conquer&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1131&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10190 - Divide, But NOt Quiter Conquer!&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;判斷 n 是否連續整除 m 到 1，可以印出整個過程&lt;/li&gt;
 &lt;li&gt;不能連續整除到 1 ， 印出 Boring!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.ArrayList;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
@@ -607,16 +624,16 @@
         <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-11150-cola/</guid>
-        <description>&lt;h3 id=&#34;題目連結--11150---cola&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=2091&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--11150---cola&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=2091&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;11150 - Cola&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;三瓶可換一瓶&lt;/li&gt;
 &lt;li&gt;如果你只有兩瓶，可以跟朋友借一瓶&lt;/li&gt;
 &lt;li&gt;印出喝了幾瓶&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -646,14 +663,14 @@
         <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10071-back-to-high-school-physics/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10071---back-to-high-school-physics&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1012&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10071---back-to-high-school-physics&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1012&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10071 - Back to High School Physics&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;單純考乘法運算&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -675,15 +692,15 @@
         <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10055-hashmat-the-brave-warrior/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10055---hashmat-the-brave-warrior&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=996&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10055---hashmat-the-brave-warrior&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=996&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10055 - Hashmat the Brave Warrior&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;取出兩個數字&lt;/li&gt;
 &lt;li&gt;相減取絕對值&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -704,15 +721,15 @@
         <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10783-odd-sum/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10783---odd-sum&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1724&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10783---odd-sum&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1724&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10783 - Odd Sum&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;ul&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;先取出範圍&lt;/li&gt;
 &lt;li&gt;將範圍內奇數數字相加起來&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
@@ -742,14 +759,14 @@
         <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
         
         <guid>https://LiaoKuoCheng.github.io/p/uva-10812-beat-the-spread/</guid>
-        <description>&lt;h3 id=&#34;題目連結--10812---beat-the-spread&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1753&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+        <description>&lt;h2 id=&#34;題目連結--10812---beat-the-spread&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1753&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;10812 - Beat the Spread!&lt;/a&gt;
-&lt;/h3&gt;&lt;h3 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h3&gt;&lt;p&gt;其實就是在解此方程式：&lt;/p&gt;
+&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
+&lt;/h2&gt;&lt;p&gt;其實就是在解此方程式：&lt;/p&gt;
 &lt;p&gt;x + y = a ，x - y = b&lt;/p&gt;
 &lt;p&gt;解為：x = (a + b)/2 ，y = (a - b)/2&lt;/p&gt;
-&lt;h3 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
+&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
