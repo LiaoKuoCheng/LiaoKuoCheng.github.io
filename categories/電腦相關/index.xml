@@ -141,7 +141,20 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;電池更換後結果圖&#34;&gt;電池更換後結果圖
-&lt;/h3&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;replacebattery.png&#34; &gt;電池更換後報告&lt;/a&gt;&lt;/p&gt;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery.png&#34;
+	width=&#34;659&#34;
+	height=&#34;693&#34;
+	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_f0e50cf87a342c56.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_c8ca59f0cbbc9cc1.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;電池更換後報告&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;95&#34;
+		data-flex-basis=&#34;228px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Design Capacity：48,840 mWh&lt;/p&gt;
@@ -151,9 +164,6 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;健康度計算：48,840 ÷ 48,840 ≒ 100% &amp;mdash;&amp;gt; 健康狀態佳&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;計算結果： 電池健康度僅約 32%，代表僅剩約三分之一壽命，建議儘快更換&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;小結&#34;&gt;小結
