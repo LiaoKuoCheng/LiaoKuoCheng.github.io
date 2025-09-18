@@ -3,18 +3,18 @@
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="簡單介紹 哈囉，大家好，我是 廖國丞(Liao Kuo-Cheng ,Cheney)，歡迎來到我的個人網站。\n我來自台中，畢業於國立勤益科技大學資訊工程系（2025年）。\n我平時的興趣主要聚焦在嵌入式單晶片（如 STM32）開發與滲透測試工具的研究，目前正努力培養自己成為一名專業的系統漏洞測試工程師。\n由於這個職業所需的資訊技術涵蓋廣泛，因此我建立了這個平台，希望能與大家分享我學習與實作過程中所累積的技術與經驗。若您發現任何錯誤或有改進建議，歡迎透過留言區指教，我會盡快查證並修正。\nHello everyone, and welcome to my personal website. My name is Liao, Kuo-Cheng (Chinese: 廖國丞, pronounced Liào Guó Chéng), and my English name is Cheney.\nI was born in Taichung, Taiwan, and I graduated from the Department of Computer Science and Information Engineering at National Chin-Yi University of Technology (NCUT) in 2025.\nMy main areas of interest include embedded microcontroller development (especially with STM32) and penetration testing tools. I am currently working toward becoming a professional system vulnerability testing engineer.\n">
-<title>About</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="題目連結 : 10252 - Common Permutation 解題思路 找到出現最多次的字母 Character.isLetter() 判斷是否為字母 用陣列統計字母頻率：countA 和 countB 各存放 a–z 的出現次數。 索引轉換技巧：letter - &lsquo;a&rsquo; 對應到陣列索引。 取交集：對每個字母計算最小出現次數，並輸出。 字母順序輸出：因為 i 從 0 → 25，所以結果自動依照字母順序排列。 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNextLine()){ String a = sc.nextLine().toLowerCase(); String b = sc.nextLine().toLowerCase(); int countA[] = new int[26]; int countB[] = new int[26]; for(int i = 0; i &lt; a.length(); i++){ char letter = a.charAt(i); // character.isLetter() 判斷是否為字母 if(Character.isLetter(letter)){ countA[letter - 97]++; } } for(int i = 0; i &lt; b.length(); i++){ char letter = b.charAt(i); if(letter &gt;= &#39;a&#39; &amp;&amp; letter &lt;= &#39;z&#39;){ countB[letter - 97]++; } } for(int i = 0; i &lt; 26; i++){ int min = Math.min(countA[i], countB[i]); for(int j = 0; j &lt; min; j++){ System.out.print((char)(i + 97)); } } System.out.println(); } } } ">
+<title>UVA 10252 - Common Permutation</title>
 
-<link rel='canonical' href='http://localhost:1313/about/'>
+<link rel='canonical' href='http://localhost:1313/p/uva-10252-common-permutation/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="About">
-<meta property='og:description' content="簡單介紹 哈囉，大家好，我是 廖國丞(Liao Kuo-Cheng ,Cheney)，歡迎來到我的個人網站。\n我來自台中，畢業於國立勤益科技大學資訊工程系（2025年）。\n我平時的興趣主要聚焦在嵌入式單晶片（如 STM32）開發與滲透測試工具的研究，目前正努力培養自己成為一名專業的系統漏洞測試工程師。\n由於這個職業所需的資訊技術涵蓋廣泛，因此我建立了這個平台，希望能與大家分享我學習與實作過程中所累積的技術與經驗。若您發現任何錯誤或有改進建議，歡迎透過留言區指教，我會盡快查證並修正。\nHello everyone, and welcome to my personal website. My name is Liao, Kuo-Cheng (Chinese: 廖國丞, pronounced Liào Guó Chéng), and my English name is Cheney.\nI was born in Taichung, Taiwan, and I graduated from the Department of Computer Science and Information Engineering at National Chin-Yi University of Technology (NCUT) in 2025.\nMy main areas of interest include embedded microcontroller development (especially with STM32) and penetration testing tools. I am currently working toward becoming a professional system vulnerability testing engineer.\n">
-<meta property='og:url' content='http://localhost:1313/about/'>
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="UVA 10252 - Common Permutation">
+<meta property='og:description' content="題目連結 : 10252 - Common Permutation 解題思路 找到出現最多次的字母 Character.isLetter() 判斷是否為字母 用陣列統計字母頻率：countA 和 countB 各存放 a–z 的出現次數。 索引轉換技巧：letter - &lsquo;a&rsquo; 對應到陣列索引。 取交集：對每個字母計算最小出現次數，並輸出。 字母順序輸出：因為 i 從 0 → 25，所以結果自動依照字母順序排列。 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNextLine()){ String a = sc.nextLine().toLowerCase(); String b = sc.nextLine().toLowerCase(); int countA[] = new int[26]; int countB[] = new int[26]; for(int i = 0; i &lt; a.length(); i++){ char letter = a.charAt(i); // character.isLetter() 判斷是否為字母 if(Character.isLetter(letter)){ countA[letter - 97]++; } } for(int i = 0; i &lt; b.length(); i++){ char letter = b.charAt(i); if(letter &gt;= &#39;a&#39; &amp;&amp; letter &lt;= &#39;z&#39;){ countB[letter - 97]++; } } for(int i = 0; i &lt; 26; i++){ int min = Math.min(countA[i], countB[i]); for(int j = 0; j &lt; min; j++){ System.out.print((char)(i + 97)); } } System.out.println(); } } } ">
+<meta property='og:url' content='http://localhost:1313/p/uva-10252-common-permutation/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Page' /><meta property='article:published_time' content='2025-05-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-01T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="簡單介紹 哈囉，大家好，我是 廖國丞(Liao Kuo-Cheng ,Cheney)，歡迎來到我的個人網站。\n我來自台中，畢業於國立勤益科技大學資訊工程系（2025年）。\n我平時的興趣主要聚焦在嵌入式單晶片（如 STM32）開發與滲透測試工具的研究，目前正努力培養自己成為一名專業的系統漏洞測試工程師。\n由於這個職業所需的資訊技術涵蓋廣泛，因此我建立了這個平台，希望能與大家分享我學習與實作過程中所累積的技術與經驗。若您發現任何錯誤或有改進建議，歡迎透過留言區指教，我會盡快查證並修正。\nHello everyone, and welcome to my personal website. My name is Liao, Kuo-Cheng (Chinese: 廖國丞, pronounced Liào Guó Chéng), and my English name is Cheney.\nI was born in Taichung, Taiwan, and I graduated from the Department of Computer Science and Information Engineering at National Chin-Yi University of Technology (NCUT) in 2025.\nMy main areas of interest include embedded microcontroller development (especially with STM32) and penetration testing tools. I am currently working toward becoming a professional system vulnerability testing engineer.\n">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CPE' /><meta property='article:published_time' content='2025-08-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-08-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="UVA 10252 - Common Permutation">
+<meta name="twitter:description" content="題目連結 : 10252 - Common Permutation 解題思路 找到出現最多次的字母 Character.isLetter() 判斷是否為字母 用陣列統計字母頻率：countA 和 countB 各存放 a–z 的出現次數。 索引轉換技巧：letter - &lsquo;a&rsquo; 對應到陣列索引。 取交集：對每個字母計算最小出現次數，並輸出。 字母順序輸出：因為 i 從 0 → 25，所以結果自動依照字母順序排列。 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNextLine()){ String a = sc.nextLine().toLowerCase(); String b = sc.nextLine().toLowerCase(); int countA[] = new int[26]; int countB[] = new int[26]; for(int i = 0; i &lt; a.length(); i++){ char letter = a.charAt(i); // character.isLetter() 判斷是否為字母 if(Character.isLetter(letter)){ countA[letter - 97]++; } } for(int i = 0; i &lt; b.length(); i++){ char letter = b.charAt(i); if(letter &gt;= &#39;a&#39; &amp;&amp; letter &lt;= &#39;z&#39;){ countB[letter - 97]++; } } for(int i = 0; i &lt; 26; i++){ int min = Math.min(countA[i], countB[i]); for(int j = 0; j &lt; min; j++){ System.out.print((char)(i + 97)); } } System.out.println(); } } } ">
 
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-35BXZW16ZN"></script>
@@ -150,7 +150,7 @@
         </li>
         
         
-        <li  class='current' >
+        <li >
             <a href='/about/' >
                 
                 
@@ -258,9 +258,9 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#簡單介紹">簡單介紹</a></li>
-    <li><a href="#我創建這個部落格主要有三個原因">我創建這個部落格主要有三個原因：</a></li>
-    <li><a href="#社群平台">社群平台</a></li>
+    <li><a href="#題目連結--10252---common-permutation">題目連結 : <a href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1193">10252 - Common Permutation</a></a></li>
+    <li><a href="#解題思路">解題思路</a></li>
+    <li><a href="#參考解答java">參考解答(JAVA)</a></li>
   </ul>
 </nav>
         </div>
@@ -277,10 +277,18 @@
 
     <div class="article-details">
     
+    <header class="article-category">
+        
+            <a href="/categories/%E8%A7%A3%E9%A1%8C%E7%B4%80%E9%8C%84/" >
+                解題紀錄
+            </a>
+        
+    </header>
+    
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/about/">About</a>
+            <a href="/p/uva-10252-common-permutation/">UVA 10252 - Common Permutation</a>
         </h2>
     
         
@@ -302,7 +310,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 01, 2025</time>
+                <time class="article-time--published">Aug 25, 2025</time>
             </div>
         
 
@@ -332,53 +340,96 @@
     <section class="article-content">
     
     
-    <h2 id="簡單介紹">簡單介紹
-</h2><p>哈囉，大家好，我是 廖國丞(Liao Kuo-Cheng ,Cheney)，歡迎來到我的個人網站。</p>
-<p>我來自台中，畢業於國立勤益科技大學資訊工程系（2025年）。</p>
-<p>我平時的興趣主要聚焦在嵌入式單晶片（如 STM32）開發與滲透測試工具的研究，目前正努力培養自己成為一名專業的系統漏洞測試工程師。</p>
-<p>由於這個職業所需的資訊技術涵蓋廣泛，因此我建立了這個平台，希望能與大家分享我學習與實作過程中所累積的技術與經驗。若您發現任何錯誤或有改進建議，歡迎透過留言區指教，我會盡快查證並修正。</p>
-<p>Hello everyone, and welcome to my personal website. My name is Liao, Kuo-Cheng (Chinese: 廖國丞, pronounced Liào Guó Chéng), and my English name is Cheney.</p>
-<p>I was born in Taichung, Taiwan, and I graduated from the Department of Computer Science and Information Engineering at National Chin-Yi University of Technology (NCUT) in 2025.</p>
-<p>My main areas of interest include embedded microcontroller development (especially with STM32) and penetration testing tools. I am currently working toward becoming a professional system vulnerability testing engineer.</p>
-<p>Because this field involves a wide range of technical skills, I created this platform to document and share what I’ve learned through study and practical experience. I’m also passionate about technology education and open collaboration. If you find any mistakes or have feedback, feel free to leave a comment — I’ll verify and improve the content as soon as possible.</p>
-<h2 id="我創建這個部落格主要有三個原因">我創建這個部落格主要有三個原因：
+    <h2 id="題目連結--10252---common-permutation">題目連結 : <a class="link" href="https://onlinejudge.org/index.php?option=com_onlinejudge&amp;Itemid=8&amp;page=show_problem&amp;problem=1193"  target="_blank" rel="noopener"
+    >10252 - Common Permutation</a>
+</h2><h2 id="解題思路">解題思路
 </h2><ul>
-<li>
-<p><strong>分享學習</strong>：我想把自己學到的知識、技巧和經歷，分享給大家，無論是同學、同行還是對技術有興趣的朋友，希望我們能共同學習。</p>
-</li>
-<li>
-<p><strong>記錄成長</strong>：這個部落格也是我學習過程中的一個紀錄，能夠回顧自己走過的路，並幫助有相似問題的朋友找到線索。</p>
-</li>
-<li>
-<p><strong>深化理解</strong>：寫文章幫助我整理思路，當我試圖解釋一些概念時，我會對這些知識有更深入的理解。</p>
-</li>
+<li>找到出現最多次的字母</li>
+<li>Character.isLetter() 判斷是否為字母</li>
+<li>用陣列統計字母頻率：countA 和 countB 各存放 a–z 的出現次數。</li>
+<li>索引轉換技巧：letter - &lsquo;a&rsquo; 對應到陣列索引。</li>
+<li>取交集：對每個字母計算最小出現次數，並輸出。</li>
+<li>字母順序輸出：因為 i 從 0 → 25，所以結果自動依照字母順序排列。</li>
 </ul>
-<h2 id="社群平台">社群平台
-</h2><ul>
-<li>
-<p><strong>GitHub</strong>: <a class="link" href="https://github.com/LiaoKuoCheng"  target="_blank" rel="noopener"
-    >@LiaoKuoCheng</a></p>
-</li>
-<li>
-<p><strong>LinkedIn</strong>: <a class="link" href="https://www.linkedin.com/in/csiecheng/"  target="_blank" rel="noopener"
-    >Liao Kuo Cheng</a></p>
-</li>
-<li>
-<p><strong>Email</strong>: <a class="link" href="mailto:csiecheng@gmail.com" >csiecheng@gmail.com</a></p>
-</li>
-</ul>
-
+<h2 id="參考解答java">參考解答(JAVA)
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.Scanner;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">main</span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span>(String args<span style="color:#f92672">[]</span>){
+</span></span><span style="display:flex;"><span>		Scanner sc <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner(System.<span style="color:#a6e22e">in</span>);
+</span></span><span style="display:flex;"><span>		
+</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">while</span>(sc.<span style="color:#a6e22e">hasNextLine</span>()){
+</span></span><span style="display:flex;"><span>			String a <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>().<span style="color:#a6e22e">toLowerCase</span>();
+</span></span><span style="display:flex;"><span>			String b <span style="color:#f92672">=</span> sc.<span style="color:#a6e22e">nextLine</span>().<span style="color:#a6e22e">toLowerCase</span>();
+</span></span><span style="display:flex;"><span>			
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">int</span> countA<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>26<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">int</span> countB<span style="color:#f92672">[]</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>26<span style="color:#f92672">]</span>;
+</span></span><span style="display:flex;"><span>			
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> a.<span style="color:#a6e22e">length</span>(); i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">char</span> letter <span style="color:#f92672">=</span> a.<span style="color:#a6e22e">charAt</span>(i);
+</span></span><span style="display:flex;"><span>				<span style="color:#75715e">// character.isLetter() 判斷是否為字母</span>
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span>(Character.<span style="color:#a6e22e">isLetter</span>(letter)){
+</span></span><span style="display:flex;"><span>					countA<span style="color:#f92672">[</span>letter <span style="color:#f92672">-</span> 97<span style="color:#f92672">]++</span>;
+</span></span><span style="display:flex;"><span>				}
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> b.<span style="color:#a6e22e">length</span>(); i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">char</span> letter <span style="color:#f92672">=</span> b.<span style="color:#a6e22e">charAt</span>(i);
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">if</span>(letter <span style="color:#f92672">&gt;=</span> <span style="color:#e6db74">&#39;a&#39;</span> <span style="color:#f92672">&amp;&amp;</span> letter <span style="color:#f92672">&lt;=</span> <span style="color:#e6db74">&#39;z&#39;</span>){
+</span></span><span style="display:flex;"><span>					countB<span style="color:#f92672">[</span>letter <span style="color:#f92672">-</span> 97<span style="color:#f92672">]++</span>;
+</span></span><span style="display:flex;"><span>				}
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0; i <span style="color:#f92672">&lt;</span> 26; i<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> Math.<span style="color:#a6e22e">min</span>(countA<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>, countB<span style="color:#f92672">[</span>i<span style="color:#f92672">]</span>);
+</span></span><span style="display:flex;"><span>				
+</span></span><span style="display:flex;"><span>				<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0; j <span style="color:#f92672">&lt;</span> min; j<span style="color:#f92672">++</span>){
+</span></span><span style="display:flex;"><span>					System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">print</span>((<span style="color:#66d9ef">char</span>)(i <span style="color:#f92672">+</span> 97));
+</span></span><span style="display:flex;"><span>				}
+</span></span><span style="display:flex;"><span>			}
+</span></span><span style="display:flex;"><span>			System.<span style="color:#a6e22e">out</span>.<span style="color:#a6e22e">println</span>();
+</span></span><span style="display:flex;"><span>		}
+</span></span><span style="display:flex;"><span>	}
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 </section>
 
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/cpe/">CPE</a>
+        
+    </section>
+
 
     </footer>
 
 
     
 
+    
+    <section id="comments">
+        
+    
+    
+    
+    <style>  
+        .utterances {  
+            max-width: unset;  
+        }  
+    </style>  
+    
+    <script 
+        src="https://utteranc.es/client.js"
+        repo="LiaoKuoCheng/LiaoKuoCheng.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+
+    </section>
     
 
 </article>
@@ -387,7 +438,85 @@
 
     
 
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相關文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/p/uva-10222-decode-the-mad-man/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UVA 10222 - Decode the Mad Man</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/uva-10929-you-can-say-11/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UVA 10929 - You can say 11</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/uva-10170-the-hotel-with-infinite-rooms/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UVA 10170 - The hotel with Infinite Rooms</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/uva-10035-primary-arithmetic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UVA 10035 - Primary Arithmetic</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/p/uva-12019-dooms-day-algorithm/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">UVA 12019 - Doom&#39;s Day Algorithm</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
      
+    
+        
+    
+
     
 
     <footer class="site-footer">

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>電池健康度 on Cheney&#39;s Blog</title>
-        <link>https://LiaoKuoCheng.github.io/tags/%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</link>
+        <link>http://localhost:1313/tags/%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</link>
         <description>Recent content in 電池健康度 on Cheney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>Cheney</copyright>
-        <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://LiaoKuoCheng.github.io/tags/%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何檢查筆電電池健康度?</title>
-        <link>https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</link>
+        <link>http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</link>
         <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</guid>
+        <guid>http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</guid>
         <description>&lt;h2 id=&#34;為什麼會有這個動機&#34;&gt;為什麼會有這個動機?
 &lt;/h2&gt;&lt;p&gt;平常用筆電都是插著電源，沒有特別在意它的續航力，畢竟我是用電競筆電（MSI GL75 10SCSK）。但這禮拜發現一拔掉電源線，電腦就直接關機，才驚覺可能是電池出問題了。&lt;/p&gt;
 &lt;p&gt;檢查後發現電池容量一直維持在 6%，於是開始查詢電池健康度的檢查方式，也想記錄下來這次經驗與大家分享。&lt;/p&gt;
@@ -27,10 +27,10 @@
 &lt;p&gt;也就是說，雖然顯示 100% 充飽，但實際電量僅為當初的 20%。&lt;/p&gt;
 &lt;h2 id=&#34;如何查詢筆電健康度&#34;&gt;如何查詢筆電健康度？
 &lt;/h2&gt;&lt;h3 id=&#34;-步驟一-win--s-搜尋--cmd----以系統管理員身分執行-&#34;&gt;📌 步驟一： win + s 搜尋 &amp;quot; cmd &amp;quot; ， &amp;quot; 以系統管理員身分執行 &amp;quot;
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2.png&#34;
 	width=&#34;766&#34;
 	height=&#34;725&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_dc7dba1813ce6fa9.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_ca282d9d063b132b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_dc7dba1813ce6fa9.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_ca282d9d063b132b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;cmd開啟方式&#34;
@@ -42,10 +42,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;-步驟二-輸入此指令---powercfgbatteryreport-&#34;&gt;📌 步驟二： 輸入此指令 : &amp;quot; powercfg/batteryreport &amp;quot;
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport.png&#34;
 	width=&#34;963&#34;
 	height=&#34;503&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_4de2de1b62c515fc.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_f39a8b6d77cae7b2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_4de2de1b62c515fc.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_f39a8b6d77cae7b2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;電池健康度指令&#34;
@@ -57,10 +57,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;-步驟三-依照產生報告位置打開報告&#34;&gt;📌 步驟三: 依照產生報告位置，打開報告
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report.png&#34;
 	width=&#34;979&#34;
 	height=&#34;512&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_1eccf8ef6a7bb9ca.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_707db983d8f46a1c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_1eccf8ef6a7bb9ca.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_707db983d8f46a1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;報告位置&#34;
@@ -72,10 +72,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;即可看到電池目前狀態&#34;&gt;即可看到電池目前狀態
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A.png&#34;
 	width=&#34;660&#34;
 	height=&#34;682&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_64593aa34eb838f1.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_97b4faed86773cbf.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_64593aa34eb838f1.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_97b4faed86773cbf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;電池報告&#34;
@@ -141,10 +141,10 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;電池更換後結果圖&#34;&gt;電池更換後結果圖
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery.png&#34;
 	width=&#34;659&#34;
 	height=&#34;693&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_f0e50cf87a342c56.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_c8ca59f0cbbc9cc1.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_f0e50cf87a342c56.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_c8ca59f0cbbc9cc1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;電池更換後報告&#34;

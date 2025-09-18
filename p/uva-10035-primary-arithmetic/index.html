@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="題目連結 : 10035 - Primary Arithmetic 解題思路 善用 / 與 % 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNextInt()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int sum = 0; // 紀錄總和 int carry = 0;\t// 紀錄進位數字 int count = 0; // 紀錄進位次數 while(a != 0 || b != 0){ sum = a % 10 + b % 10 + carry; if(sum &gt;= 10){ count += 1; carry = 1; }else{ carry = 0; } a /= 10; b /= 10; } if(count == 0){ System.out.println(&#34;No carry operation.&#34;); }else if(count == 1){ System.out.println(&#34;1 carry operation.&#34;); }else{ System.out.println(count + &#34; carry operations.&#34;); } } } } ">
 <title>UVA 10035 - Primary Arithmetic</title>
 
-<link rel='canonical' href='https://LiaoKuoCheng.github.io/p/uva-10035-primary-arithmetic/'>
+<link rel='canonical' href='http://localhost:1313/p/uva-10035-primary-arithmetic/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="UVA 10035 - Primary Arithmetic">
 <meta property='og:description' content="題目連結 : 10035 - Primary Arithmetic 解題思路 善用 / 與 % 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNextInt()){ int a = sc.nextInt(); int b = sc.nextInt(); if(a == 0 &amp;&amp; b == 0){ break; } int sum = 0; // 紀錄總和 int carry = 0;\t// 紀錄進位數字 int count = 0; // 紀錄進位次數 while(a != 0 || b != 0){ sum = a % 10 + b % 10 + carry; if(sum &gt;= 10){ count += 1; carry = 1; }else{ carry = 0; } a /= 10; b /= 10; } if(count == 0){ System.out.println(&#34;No carry operation.&#34;); }else if(count == 1){ System.out.println(&#34;1 carry operation.&#34;); }else{ System.out.println(count + &#34; carry operations.&#34;); } } } } ">
-<meta property='og:url' content='https://LiaoKuoCheng.github.io/p/uva-10035-primary-arithmetic/'>
+<meta property='og:url' content='http://localhost:1313/p/uva-10035-primary-arithmetic/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CPE' /><meta property='article:published_time' content='2025-07-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-02T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="UVA 10035 - Primary Arithmetic">
@@ -630,7 +630,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.73f3d6635cf85c68ab24ef6c1aa8e1e528128ca562ba8d3fe00dadba08519a7a.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

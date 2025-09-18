@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="題目連結 : 12019 - Doom&rsquo;s Day Algorithm 解題思路 以2009年為例子，算出星期幾 第一個迴圈 : 扣除這個月總共有幾天 扣除部分 + 天數 = 總共天數 總共天數 mod 7 就知道星期幾了 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int months[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; String weeks[] = {&#34;Sunday&#34;, &#34;Monday&#34;, &#34;Tuesday&#34;, &#34;Wednesday&#34;, &#34;Thursday&#34;, &#34;Friday&#34;, &#34;Saturday&#34;}; while(sc.hasNextInt()){ int cases = sc.nextInt(); for(int i = 0; i &lt; cases; i++){ int month = sc.nextInt(); int day = sc.nextInt(); int sumDay = 0;\tfor(int m = 0; m &lt; month - 1; m++){ sumDay += months[m]; } sumDay += day; int weekIndex = (sumDay + 5) % 7; System.out.println(weeks[weekIndex]); } } } } ">
 <title>UVA 12019 - Doom&#39;s Day Algorithm</title>
 
-<link rel='canonical' href='https://LiaoKuoCheng.github.io/p/uva-12019-dooms-day-algorithm/'>
+<link rel='canonical' href='http://localhost:1313/p/uva-12019-dooms-day-algorithm/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="UVA 12019 - Doom's Day Algorithm">
 <meta property='og:description' content="題目連結 : 12019 - Doom&rsquo;s Day Algorithm 解題思路 以2009年為例子，算出星期幾 第一個迴圈 : 扣除這個月總共有幾天 扣除部分 + 天數 = 總共天數 總共天數 mod 7 就知道星期幾了 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); int months[] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}; String weeks[] = {&#34;Sunday&#34;, &#34;Monday&#34;, &#34;Tuesday&#34;, &#34;Wednesday&#34;, &#34;Thursday&#34;, &#34;Friday&#34;, &#34;Saturday&#34;}; while(sc.hasNextInt()){ int cases = sc.nextInt(); for(int i = 0; i &lt; cases; i++){ int month = sc.nextInt(); int day = sc.nextInt(); int sumDay = 0;\tfor(int m = 0; m &lt; month - 1; m++){ sumDay += months[m]; } sumDay += day; int weekIndex = (sumDay + 5) % 7; System.out.println(weeks[weekIndex]); } } } } ">
-<meta property='og:url' content='https://LiaoKuoCheng.github.io/p/uva-12019-dooms-day-algorithm/'>
+<meta property='og:url' content='http://localhost:1313/p/uva-12019-dooms-day-algorithm/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CPE' /><meta property='article:published_time' content='2025-07-01T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-01T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="UVA 12019 - Doom's Day Algorithm">
@@ -622,7 +622,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.73f3d6635cf85c68ab24ef6c1aa8e1e528128ca562ba8d3fe00dadba08519a7a.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

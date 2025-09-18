@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="題目連結 : 10929 - You can say 11 解題思路 判斷是否為 11 倍數 分出 奇數 與 偶數 奇數 - 偶數 mod 11 判斷是否為 11 倍數 ex. 121 odd : 1 1 &mdash;&gt; 1 + 1 = 2 even : 2 &mdash;&gt; 2 (odd - even) % 11 = 0 % 11 = 0 可被 11 整除，所以是 11 倍數 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNext()){ String text = sc.next(); if(text.equals(&#34;0&#34;)){ break; } int odd = 0; int even = 0; for(int i = 0; i &lt; text.length(); i++){ // 字元轉成數字 int number = text.charAt(i) - &#39;0&#39;; if(i % 2 == 1){ odd += number; }else{ even += number; } } if((odd - even) % 11 == 0){ System.out.println(text + &#34; is a multiple of 11.&#34;); }else{ System.out.println(text + &#34; is not a multiple of 11.&#34;); } } } } ">
 <title>UVA 10929 - You can say 11</title>
 
-<link rel='canonical' href='https://LiaoKuoCheng.github.io/p/uva-10929-you-can-say-11/'>
+<link rel='canonical' href='http://localhost:1313/p/uva-10929-you-can-say-11/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="UVA 10929 - You can say 11">
 <meta property='og:description' content="題目連結 : 10929 - You can say 11 解題思路 判斷是否為 11 倍數 分出 奇數 與 偶數 奇數 - 偶數 mod 11 判斷是否為 11 倍數 ex. 121 odd : 1 1 &mdash;&gt; 1 + 1 = 2 even : 2 &mdash;&gt; 2 (odd - even) % 11 = 0 % 11 = 0 可被 11 整除，所以是 11 倍數 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNext()){ String text = sc.next(); if(text.equals(&#34;0&#34;)){ break; } int odd = 0; int even = 0; for(int i = 0; i &lt; text.length(); i++){ // 字元轉成數字 int number = text.charAt(i) - &#39;0&#39;; if(i % 2 == 1){ odd += number; }else{ even += number; } } if((odd - even) % 11 == 0){ System.out.println(text + &#34; is a multiple of 11.&#34;); }else{ System.out.println(text + &#34; is not a multiple of 11.&#34;); } } } } ">
-<meta property='og:url' content='https://LiaoKuoCheng.github.io/p/uva-10929-you-can-say-11/'>
+<meta property='og:url' content='http://localhost:1313/p/uva-10929-you-can-say-11/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CPE' /><meta property='article:published_time' content='2025-07-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-07-16T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="UVA 10929 - You can say 11">
@@ -625,7 +625,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.73f3d6635cf85c68ab24ef6c1aa8e1e528128ca562ba8d3fe00dadba08519a7a.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
