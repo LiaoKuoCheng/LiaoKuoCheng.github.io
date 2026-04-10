@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+    <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="題目連結 : 100 - The 3n + 1 problem 解題思路 將數字帶入演算法，算出數列中有幾個數字 前兩個數字是題目輸入的，第三個是數列有幾個數字 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNextInt()){ int n = sc.nextInt(); int m = sc.nextInt(); System.out.print(n + &#34; &#34; + m + &#34; &#34;); if(n &gt; m){ int temp = n; n = m; m = temp; } int max = 0; for(int i = n; i &lt;= m; i++){ int number = i; int count = 1; // 計算數列數字 while(number &gt; 1){ if(number % 2 == 0){ number /= 2; } else{ number = 3 * number + 1; } count += 1; } if(count &gt; max){ max = count; } } System.out.println(max); } } } ">
 <title>UVA 100 - The 3n &#43; 1 problem</title>
 
-<link rel='canonical' href='http://localhost:1313/p/uva-100-the-3n--1-problem/'>
+<link rel='canonical' href='https://LiaoKuoCheng.github.io/p/uva-100-the-3n--1-problem/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="UVA 100 - The 3n + 1 problem">
 <meta property='og:description' content="題目連結 : 100 - The 3n + 1 problem 解題思路 將數字帶入演算法，算出數列中有幾個數字 前兩個數字是題目輸入的，第三個是數列有幾個數字 參考解答(JAVA) import java.util.Scanner; public class main{ public static void main(String args[]){ Scanner sc = new Scanner(System.in); while(sc.hasNextInt()){ int n = sc.nextInt(); int m = sc.nextInt(); System.out.print(n + &#34; &#34; + m + &#34; &#34;); if(n &gt; m){ int temp = n; n = m; m = temp; } int max = 0; for(int i = n; i &lt;= m; i++){ int number = i; int count = 1; // 計算數列數字 while(number &gt; 1){ if(number % 2 == 0){ number /= 2; } else{ number = 3 * number + 1; } count += 1; } if(count &gt; max){ max = count; } } System.out.println(max); } } } ">
-<meta property='og:url' content='http://localhost:1313/p/uva-100-the-3n--1-problem/'>
+<meta property='og:url' content='https://LiaoKuoCheng.github.io/p/uva-100-the-3n--1-problem/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='CPE' /><meta property='article:published_time' content='2025-06-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-06-23T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="UVA 100 - The 3n + 1 problem">
@@ -521,7 +521,7 @@
     <section class="copyright">
         &copy; 
         
-        2025 Cheney
+        2026 Cheney
     </section>
 
     <section class="powerby">
@@ -629,7 +629,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.73f3d6635cf85c68ab24ef6c1aa8e1e528128ca562ba8d3fe00dadba08519a7a.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');

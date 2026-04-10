@@ -12,9 +12,19 @@
 <meta property='og:description' content="大學專題">
 <meta property='og:url' content='https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='STM32' /><meta property='article:tag' content='YoloV8' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='C#' /><meta property='article:published_time' content='2025-05-02T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-02T00:00:00&#43;00:00'/>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='STM32' /><meta property='article:tag' content='YoloV8' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='C#' /><meta property='article:published_time' content='2024-06-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-06-10T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="居家型健康檢測系統">
 <meta name="twitter:description" content="大學專題">
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-35BXZW16ZN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-35BXZW16ZN');
+</script>
     </head>
     <body class="
     article-page
@@ -248,14 +258,14 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ul>
-    <li>
+    <li><a href="#專題架構">專題架構</a>
       <ul>
-        <li><a href="#專題架構">專題架構</a></li>
-        <li><a href="#專題成員">專題成員</a></li>
-        <li><a href="#韌體">韌體</a></li>
-        <li><a href="#影像辨識">影像辨識</a></li>
-        <li><a href="#資料接收與分析">資料接收與分析</a></li>
-        <li><a href="#成果展示">成果展示</a></li>
+        <li><a href="#1-專題架構">1. 專題架構</a></li>
+        <li><a href="#2-韌體開發-吳則緯陳士弘">2. 韌體開發 (吳則緯、陳士弘)</a></li>
+        <li><a href="#3-影像辨識-廖國丞">3. 影像辨識 (廖國丞)</a></li>
+        <li><a href="#4-資料接收與分析-吳則緯">4. 資料接收與分析 (吳則緯)</a></li>
+        <li><a href="#5-成果展示">5. 成果展示</a></li>
+        <li><a href="#6-心得">6. 心得</a></li>
       </ul>
     </li>
   </ul>
@@ -311,7 +321,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">May 02, 2025</time>
+                <time class="article-time--published">Jun 10, 2024</time>
             </div>
         
 
@@ -341,7 +351,8 @@
     <section class="article-content">
     
     
-    <h3 id="專題架構">專題架構
+    <h2 id="專題架構">專題架構
+</h2><h3 id="1-專題架構">1. 專題架構
 </h3><p>使用 Laudon 資訊管理系統 Modle 繪製出整個架構</p>
 <p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96.png"
 	width="1018"
@@ -357,13 +368,264 @@
 		data-flex-basis="483px"
 	
 ></p>
-<h3 id="專題成員">專題成員
-</h3><p>廖國丞、吳則緯、陳士弘</p>
-<h3 id="韌體">韌體
-</h3><h3 id="影像辨識">影像辨識
-</h3><h3 id="資料接收與分析">資料接收與分析
-</h3><h3 id="成果展示">成果展示
-</h3>
+<ul>
+<li>專題成員：吳則緯、陳士弘、廖國丞。</li>
+<li>指導老師：林基源(資料系)、陳啟鈞(電子系)、吳書慶(博士班學長)</li>
+</ul>
+<hr>
+<h3 id="2-韌體開發-吳則緯陳士弘">2. 韌體開發 (吳則緯、陳士弘)
+</h3><h4 id="核心硬體選用">核心硬體選用
+</h4><ul>
+<li>微控制器：STM32F103C8T6</li>
+<li>感測組件：MPU6050 陀螺儀、HC-25 WiFi 模組  及 74HC14 施密特觸發器。</li>
+</ul>
+<h4 id="呼吸感測原理">呼吸感測原理
+</h4><ul>
+<li>電容轉脈衝：在腰帶貼上導電銀布，呼吸引起的腹部拉扯會改變電容值。</li>
+<li>電路轉換：利用 74HC14 施密特觸發器與 RC 電路串聯腰帶，將電容變化轉化為方波頻率。</li>
+<li>量化採樣：MCU 透過外部中斷 (EXTI) 讀取上升緣，計算 0.2 秒內的充放電次數來量化呼吸深度。</li>
+</ul>
+<p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29.png"
+	width="687"
+	height="160"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29_hu_9720b23b08d87e66.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29_hu_5ac0f8deb6e79b7c.png 1024w"
+	loading="lazy"
+	
+		alt="導電銀布(一般)"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="429"
+		data-flex-basis="1030px"
+	
+>
+<img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29.png"
+	width="831"
+	height="161"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29_hu_142d21afb951d7a4.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29_hu_ebb9678fe7852a9e.png 1024w"
+	loading="lazy"
+	
+		alt="導電銀布(拉扯)"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="516"
+		data-flex-basis="1238px"
+	
+></p>
+<p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1.png"
+	width="638"
+	height="417"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1_hu_e0c7c69f6d02f353.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1_hu_34f7eb01a4dfc7fb.png 1024w"
+	loading="lazy"
+	
+		alt="腰帶"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="152"
+		data-flex-basis="367px"
+	
+>
+<img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2.png"
+	width="613"
+	height="561"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2_hu_dcef823ccc3eb539.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2_hu_92fe0d59ce09cd22.png 1024w"
+	loading="lazy"
+	
+		alt="穿戴方式"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="109"
+		data-flex-basis="262px"
+	
+></p>
+<h4 id="技術挑戰與解決方案">技術挑戰與解決方案
+</h4><ul>
+<li>I2C 位址左移：修正 MPU6050 的 7 位元位址需左移 1 位方可通訊的問題。</li>
+<li>UART 阻塞式傳輸：捨棄 DMA 傳輸，改採阻塞模式以確保數據發送與 C# 接收端同步。</li>
+<li>中斷洪水防治：為防止環境雜訊導致外部中斷無限觸發，設置 99999 次計數上限，並在採樣後強制關閉中斷，維持系統穩定。</li>
+</ul>
+<hr>
+<h3 id="3-影像辨識-廖國丞">3. 影像辨識 (廖國丞)
+</h3><h4 id="yolov8-辨識流程">YOLOv8 辨識流程
+</h4><ul>
+<li>模型選用：採用 最新版 YOLOv8n 模型。</li>
+<li>數據集建立：拍攝睡眠影片並裁切成一幀幀圖片，手動標註「正躺、左側躺、右側躺」三種標籤。</li>
+<li>訓練集:使用250張圖像作為訓練集(每個動作各為250張)總共採集2550張，訓練集 680 張，測試集 170 張。</li>
+</ul>
+<p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87.png"
+	width="544"
+	height="184"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87_hu_b4a659eae64758c6.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87_hu_586f64172fadaeb3.png 1024w"
+	loading="lazy"
+	
+		alt="訓練集圖片(包含正躺、左躺與右躺)"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="295"
+		data-flex-basis="709px"
+	
+></p>
+<h4 id="訓練模型結果">訓練模型結果
+</h4><p>模型能夠準確識別「正面」、「側面」和「右躺」三種動作。從精確度-召回率曲線圖中可見，所有類別的平均精確度達到0.992，顯示出模型在不同動作上的高精度和穩定性。</p>
+<p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96.png"
+	width="2250"
+	height="1500"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96_hu_3ee5ce5c1b909ce2.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96_hu_1409fe43d2c00861.png 1024w"
+	loading="lazy"
+	
+		alt="訓練結果圖"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="150"
+		data-flex-basis="360px"
+	
+>
+<img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6.png"
+	width="1920"
+	height="1920"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6_hu_e600166eca10747.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6_hu_a6561a8a7c1d77c.png 1024w"
+	loading="lazy"
+	
+		alt="驗證集測試準確度"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="240px"
+	
+></p>
+<h4 id="關鍵優化辨識目標調整">關鍵優化：辨識目標調整
+</h4><ul>
+<li>初期挑戰：原先嘗試辨識「全人體姿態」，但發現使用者蓋被子後特徵會被遮蔽，導致精確度極低。</li>
+<li>解方：將鏡頭安置於臉部正上方，專注於頭部/臉部特徵。此調整大幅提升了被子覆蓋下的辨識率。</li>
+</ul>
+<hr>
+<h3 id="4-資料接收與分析-吳則緯">4. 資料接收與分析 (吳則緯)
+</h3><h4 id="c-監控中樞">C# 監控中樞
+</h4><ul>
+<li>傳輸協議：選用 TCP/IP 搭配 WiFi，因其比藍牙距離更遠、比 UDP 更穩定。</li>
+<li>介面開發：使用 WinForm (GDI+) 實現「所見即所得」的開發，並即時繪製呼吸波形圖。</li>
+</ul>
+<h4 id="linebot-預警機制">LineBot 預警機制
+</h4><ul>
+<li>雲端伺服器：結合 Google Apps Script (GAS) 建立 LineBot，具備零維護成本與高可用性。</li>
+</ul>
+<h4 id="報警邏輯">報警邏輯
+</h4><ul>
+<li>呼吸異常：5 秒內波峰波谷差值 &lt; 1000。</li>
+<li>疑似跌倒：影像偵測不到標籤（人離開畫面）且陀螺儀判斷為躺下。</li>
+<li>久臥提醒：相同姿勢維持超過 1.5 小時，發送翻身提醒。</li>
+</ul>
+<p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI.png"
+	width="1271"
+	height="466"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI_hu_1c7d5f87f39ade4f.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI_hu_ab0475b3f85df803.png 1024w"
+	loading="lazy"
+	
+		alt="C# GUI"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="272"
+		data-flex-basis="654px"
+	
+></p>
+<h4 id="資料庫儲存">資料庫儲存
+</h4><p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB.png"
+	width="749"
+	height="485"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB_hu_1190fa20589a5064.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB_hu_f0978ef11a7f430d.png 1024w"
+	loading="lazy"
+	
+		alt="呼吸資料庫"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="154"
+		data-flex-basis="370px"
+	
+>
+<img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB.png"
+	width="1572"
+	height="541"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB_hu_7527317c80995673.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB_hu_f958e7fbdba4f872.png 1024w"
+	loading="lazy"
+	
+		alt="陀螺儀"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="290"
+		data-flex-basis="697px"
+	
+></p>
+<p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB.png"
+	width="978"
+	height="488"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB_hu_ccb8fe29abc254f0.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB_hu_54cc1015912781bc.png 1024w"
+	loading="lazy"
+	
+		alt="影像辨識資料庫"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="200"
+		data-flex-basis="480px"
+	
+>
+<img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84.png"
+	width="380"
+	height="309"
+	srcset="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84_hu_dc70bded905a0f37.png 480w, /p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84_hu_a306ef3728cef875.png 1024w"
+	loading="lazy"
+	
+		alt="報警記錄"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="122"
+		data-flex-basis="295px"
+	
+></p>
+<hr>
+<h3 id="5-成果展示">5. 成果展示
+</h3><ul>
+<li>
+<p>呼吸停止
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/8zGjkzR11RA" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+</p>
+</li>
+<li>
+<p>跌倒可能
+<div class="video-wrapper">
+    <iframe loading="lazy" 
+            src="https://www.youtube.com/embed/Z5_P3A_KMV8" 
+            allowfullscreen 
+            title="YouTube Video"
+    >
+    </iframe>
+</div>
+</p>
+</li>
+</ul>
+<hr>
+<h3 id="6-心得">6. 心得
+</h3><p>大學二年級時，我們三個一起加入陳啟鈞老師帶領的實驗室，
+此專題是從電容布織布產學專案慢慢延伸而成的，
+在此感謝我的組員們，還有學長導師指導。</p>
+
 </section>
 
 
@@ -386,6 +648,32 @@
 
 
     
+
+    
+    <section id="comments">
+        
+    
+    
+    
+    <style>  
+        .utterances {  
+            max-width: unset;  
+        }  
+    </style>  
+    
+    <script 
+        src="https://utteranc.es/client.js"
+        repo="LiaoKuoCheng/LiaoKuoCheng.github.io"
+        issue-term="pathname"
+        theme="github-dark"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+
+    </section>
+    
+
 </article>
 
     
@@ -397,11 +685,13 @@
         
     
 
+    
+
     <footer class="site-footer">
     <section class="copyright">
         &copy; 
         
-        2025 Cheney
+        2026 Cheney
     </section>
 
     <section class="powerby">
