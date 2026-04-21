@@ -2,205 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Cheney&#39;s Blog</title>
-        <link>https://LiaoKuoCheng.github.io/</link>
+        <link>http://localhost:1313/</link>
         <description>Recent content on Cheney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh-tw</language>
         <copyright>Cheney</copyright>
-        <lastBuildDate>Tue, 26 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://LiaoKuoCheng.github.io/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>272 - TEX Quotes</title>
-        <link>https://LiaoKuoCheng.github.io/p/272-tex-quotes/</link>
-        <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/272-tex-quotes/</guid>
-        <description>&lt;h2 id=&#34;題目連結--272---tex-quotes&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=4&amp;amp;page=show_problem&amp;amp;problem=208&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;272 - TEX Quotes&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;逐行讀取文章&lt;/li&gt;
-&lt;li&gt;逐字檢查是否是 &amp;quot;&lt;/li&gt;
-&lt;li&gt;利用計數器 count 判斷奇偶&lt;/li&gt;
-&lt;li&gt;奇數 → 左引號 ````&lt;/li&gt;
-&lt;li&gt;偶數 → 右引號 &#39;&#39;&lt;/li&gt;
-&lt;li&gt;非引號字元直接輸出&lt;/li&gt;
-&lt;li&gt;換行輸出保持格式&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;	&lt;span style=&#34;color:#75715e&#34;&gt;// 記錄整篇有幾個雙引號&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextLine&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			String text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (String)sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextLine&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; text.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(); i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; symbol &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; text.&lt;span style=&#34;color:#a6e22e&#34;&gt;charAt&lt;/span&gt;(i);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(symbol &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#34;&amp;#39;&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;``&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#39;&amp;#39;&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(symbol);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>948 - Fibonaccimal Base</title>
-        <link>https://LiaoKuoCheng.github.io/p/948-fibonaccimal-base/</link>
-        <pubDate>Tue, 26 Aug 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/948-fibonaccimal-base/</guid>
-        <description>&lt;h2 id=&#34;題目連結--948---fibonaccimal-base&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=889&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;948 - Fibonaccimal Base&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;生成 Fibonacci 數列&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;從 &lt;code&gt;1, 2&lt;/code&gt; 開始（不是 &lt;code&gt;0, 1&lt;/code&gt;）。&lt;/li&gt;
-&lt;li&gt;持續生成直到大於輸入的數字。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;從最大 Fibonacci 開始往下掃描&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;如果 &lt;code&gt;number &amp;gt;= fib[i]&lt;/code&gt;：
-&lt;ul&gt;
-&lt;li&gt;減去該 Fibonacci&lt;/li&gt;
-&lt;li&gt;在輸出上印 &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;否則：
-&lt;ul&gt;
-&lt;li&gt;如果已經印過 &lt;code&gt;1&lt;/code&gt;，就印 &lt;code&gt;0&lt;/code&gt;（確保長度正確）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;重複直到 number = 0&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;結束後得到唯一的 Fibonaccimal Base。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.ArrayList;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; cases &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; fibList &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(1);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(2);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; cases; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; = &amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; 1)){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; previousOne &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; 1);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; previousTwo &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; 2);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(previousOne &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; previousTwo);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; isPrintZero &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;size&lt;/span&gt;() &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; 1; j &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; 0; j&lt;span style=&#34;color:#f92672&#34;&gt;--&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; fib &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; fibList.&lt;span style=&#34;color:#a6e22e&#34;&gt;get&lt;/span&gt;(j);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; fib){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					number &lt;span style=&#34;color:#f92672&#34;&gt;-=&lt;/span&gt; fib;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					isPrintZero &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(isPrintZero){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; (fib)&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10252 - Common Permutation</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10252-common-permutation/</link>
-        <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10252-common-permutation/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10252---common-permutation&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=1193&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10252 - Common Permutation&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;找到出現最多次的字母&lt;/li&gt;
-&lt;li&gt;Character.isLetter() 判斷是否為字母&lt;/li&gt;
-&lt;li&gt;用陣列統計字母頻率：countA 和 countB 各存放 a–z 的出現次數。&lt;/li&gt;
-&lt;li&gt;索引轉換技巧：letter - &amp;lsquo;a&amp;rsquo; 對應到陣列索引。&lt;/li&gt;
-&lt;li&gt;取交集：對每個字母計算最小出現次數，並輸出。&lt;/li&gt;
-&lt;li&gt;字母順序輸出：因為 i 從 0 → 25，所以結果自動依照字母順序排列。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; (sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextLine&lt;/span&gt;()) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            String a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextLine&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;toLowerCase&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            String b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextLine&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;toLowerCase&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; countA&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;26&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; countB&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;26&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;// 統計 a 字串的字母&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; a.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(); i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; letter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a.&lt;span style=&#34;color:#a6e22e&#34;&gt;charAt&lt;/span&gt;(i);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (letter &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; letter &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;z&amp;#39;&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    countA&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;letter &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]++&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;// 統計 b 字串的字母&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; b.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(); i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; letter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; b.&lt;span style=&#34;color:#a6e22e&#34;&gt;charAt&lt;/span&gt;(i);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (letter &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; letter &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;z&amp;#39;&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    countB&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;letter &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;]++&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;// 找出共同字母並輸出&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 26; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; min &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Math.&lt;span style=&#34;color:#a6e22e&#34;&gt;min&lt;/span&gt;(countA&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;, countB&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; j &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; min; j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;) {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;((&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;) (i &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(); 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
+        <lastBuildDate>Fri, 25 Jul 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>如何檢查筆電電池健康度?</title>
-        <link>https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</link>
+        <link>http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</link>
         <pubDate>Fri, 25 Jul 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</guid>
+        <guid>http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/</guid>
         <description>&lt;h2 id=&#34;為什麼會有這個動機&#34;&gt;為什麼會有這個動機?
 &lt;/h2&gt;&lt;p&gt;平常用筆電都是插著電源，沒有特別在意它的續航力，畢竟我是用電競筆電（MSI GL75 10SCSK）。但這禮拜發現一拔掉電源線，電腦就直接關機，才驚覺可能是電池出問題了。&lt;/p&gt;
 &lt;p&gt;檢查後發現電池容量一直維持在 6%，於是開始查詢電池健康度的檢查方式，也想記錄下來這次經驗與大家分享。&lt;/p&gt;
@@ -215,10 +27,10 @@
 &lt;p&gt;也就是說，雖然顯示 100% 充飽，但實際電量僅為當初的 20%。&lt;/p&gt;
 &lt;h2 id=&#34;如何查詢筆電健康度&#34;&gt;如何查詢筆電健康度？
 &lt;/h2&gt;&lt;h3 id=&#34;-步驟一-win--s-搜尋--cmd----以系統管理員身分執行-&#34;&gt;📌 步驟一： win + s 搜尋 &amp;quot; cmd &amp;quot; ， &amp;quot; 以系統管理員身分執行 &amp;quot;
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2.png&#34;
 	width=&#34;766&#34;
 	height=&#34;725&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_dc7dba1813ce6fa9.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_ca282d9d063b132b.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_dc7dba1813ce6fa9.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/cmd%E6%9F%A5%E8%A9%A2_hu_ca282d9d063b132b.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;cmd開啟方式&#34;
@@ -230,10 +42,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;-步驟二-輸入此指令---powercfgbatteryreport-&#34;&gt;📌 步驟二： 輸入此指令 : &amp;quot; powercfg/batteryreport &amp;quot;
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport.png&#34;
 	width=&#34;963&#34;
 	height=&#34;503&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_4de2de1b62c515fc.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_f39a8b6d77cae7b2.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_4de2de1b62c515fc.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/powerbetteryreport_hu_f39a8b6d77cae7b2.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;電池健康度指令&#34;
@@ -245,10 +57,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;-步驟三-依照產生報告位置打開報告&#34;&gt;📌 步驟三: 依照產生報告位置，打開報告
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report.png&#34;
 	width=&#34;979&#34;
 	height=&#34;512&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_1eccf8ef6a7bb9ca.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_707db983d8f46a1c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_1eccf8ef6a7bb9ca.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/report_hu_707db983d8f46a1c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;報告位置&#34;
@@ -260,10 +72,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;即可看到電池目前狀態&#34;&gt;即可看到電池目前狀態
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A.png&#34;
 	width=&#34;660&#34;
 	height=&#34;682&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_64593aa34eb838f1.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_97b4faed86773cbf.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_64593aa34eb838f1.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/%E5%A0%B1%E5%91%8A_hu_97b4faed86773cbf.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;電池報告&#34;
@@ -329,10 +141,10 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;h3 id=&#34;電池更換後結果圖&#34;&gt;電池更換後結果圖
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery.png&#34;
 	width=&#34;659&#34;
 	height=&#34;693&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_f0e50cf87a342c56.png 480w, https://LiaoKuoCheng.github.io/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_c8ca59f0cbbc9cc1.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_f0e50cf87a342c56.png 480w, http://localhost:1313/p/%E5%A6%82%E4%BD%95%E6%AA%A2%E6%9F%A5%E7%AD%86%E9%9B%BB%E9%9B%BB%E6%B1%A0%E5%81%A5%E5%BA%B7%E5%BA%A6/replacebattery_hu_c8ca59f0cbbc9cc1.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;電池更換後報告&#34;
@@ -363,639 +175,12 @@
 </description>
         </item>
         <item>
-        <title>UVA 10222 - Decode the Mad Man</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10222-decode-the-mad-man/</link>
-        <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10222-decode-the-mad-man/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10222---decode-the-mad-man&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=14&amp;amp;page=show_problem&amp;amp;problem=1163&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10222 - Decode the Mad man&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;建立鍵盤&lt;/li&gt;
-&lt;li&gt;charAt() 把字串逐一排查&lt;/li&gt;
-&lt;li&gt;indexOf() 找出字元在鍵盤的位置，因為題目是左移兩格，所以必須-2才可順利解碼&lt;/li&gt;
-&lt;li&gt;charAt() &amp;mdash;&amp;gt; 知道「位置」，想找尋 「字元」&lt;/li&gt;
-&lt;li&gt;indexOf() &amp;mdash;&amp;gt; 知道「字元」，想找尋 「位置」，傳回 -1 表示找不到&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		String keyboard &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;qwertyuiop[]\\asdfghjkl;&amp;#39;zxcvbnm,./&amp;#34;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextLine&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			String text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextLine&lt;/span&gt;().&lt;span style=&#34;color:#a6e22e&#34;&gt;toLowerCase&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; text.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(); i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#75715e&#34;&gt;// 取當前字元&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; word &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; text.&lt;span style=&#34;color:#a6e22e&#34;&gt;charAt&lt;/span&gt;(i);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#75715e&#34;&gt;// 找出鍵盤對應位置&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; letter &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; keyboard.&lt;span style=&#34;color:#a6e22e&#34;&gt;indexOf&lt;/span&gt;(word);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#75715e&#34;&gt;// 如果index不等於-1代表此字元存在鍵盤中&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(letter &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; letter &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; 2){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(keyboard.&lt;span style=&#34;color:#a6e22e&#34;&gt;charAt&lt;/span&gt;(letter &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; 2));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(word);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10929 - You can say 11</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10929-you-can-say-11/</link>
-        <pubDate>Wed, 16 Jul 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10929-you-can-say-11/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10929---you-can-say-11&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=21&amp;amp;page=show_problem&amp;amp;problem=1870&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10929 - You can say 11&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;判斷是否為 11 倍數&lt;/li&gt;
-&lt;li&gt;分出 奇數 與 偶數&lt;/li&gt;
-&lt;li&gt;奇數 - 偶數 mod 11 判斷是否為 11 倍數&lt;/li&gt;
-&lt;li&gt;ex. 121&lt;/li&gt;
-&lt;li&gt;odd : 1 1 &amp;mdash;&amp;gt; 1 + 1 = 2&lt;/li&gt;
-&lt;li&gt;even : 2  &amp;mdash;&amp;gt; 2&lt;/li&gt;
-&lt;li&gt;(odd - even) % 11 = 0 % 11 = 0 可被 11 整除，所以是 11 倍數&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNext&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			String text &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;next&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(text.&lt;span style=&#34;color:#a6e22e&#34;&gt;equals&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;0&amp;#34;&lt;/span&gt;)){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; odd &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; even &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; text.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(); i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#75715e&#34;&gt;// 字元轉成數字&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; text.&lt;span style=&#34;color:#a6e22e&#34;&gt;charAt&lt;/span&gt;(i) &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;0&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(i &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					odd &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; number;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					even &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; number;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;((odd &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; even) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 11 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(text &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; is a multiple of 11.&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(text &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; is not a multiple of 11.&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10170 - The hotel with Infinite Rooms</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10170-the-hotel-with-infinite-rooms/</link>
-        <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10170-the-hotel-with-infinite-rooms/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10170---the-hotel-with-infinite-rooms&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=13&amp;amp;page=show_problem&amp;amp;problem=1111&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10170 - The Hotel with Infinite Rooms&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;若累積入住人數 &amp;gt; 入住日 可知道 團體人數&lt;/li&gt;
-&lt;li&gt;入住日與累積人數要設定為 long 因為題目測資關係&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNext&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();		&lt;span style=&#34;color:#75715e&#34;&gt;// 團體人數&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; day &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextLong&lt;/span&gt;();		&lt;span style=&#34;color:#75715e&#34;&gt;// 指定日期&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;		&lt;span style=&#34;color:#75715e&#34;&gt;// 累積人數&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; group;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; day){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(group);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				group &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10035 - Primary Arithmetic</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10035-primary-arithmetic/</link>
-        <pubDate>Wed, 02 Jul 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10035-primary-arithmetic/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10035---primary-arithmetic&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/external/100/10035.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10035 - Primary Arithmetic&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;善用 / 與 %&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextInt&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(a &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; &lt;span style=&#34;color:#75715e&#34;&gt;// 紀錄總和&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; carry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;	&lt;span style=&#34;color:#75715e&#34;&gt;// 紀錄進位數字&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; 	&lt;span style=&#34;color:#75715e&#34;&gt;// 紀錄進位次數&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(a &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; 0 &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 10 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 10 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; carry;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(sum &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; 10){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					carry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					carry &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				a &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; 10;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				b &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; 10;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;No carry operation.&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1 carry operation.&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; carry operations.&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 12019 - Doom&#39;s Day Algorithm</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-12019-dooms-day-algorithm/</link>
-        <pubDate>Tue, 01 Jul 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-12019-dooms-day-algorithm/</guid>
-        <description>&lt;h2 id=&#34;題目連結--12019---doom&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=242&amp;amp;page=show_problem&amp;amp;problem=3170&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;12019 - Doom&amp;rsquo;s Day Algorithm&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;以2009年為例子，算出星期幾&lt;/li&gt;
-&lt;li&gt;第一個迴圈 : 扣除這個月總共有幾天&lt;/li&gt;
-&lt;li&gt;扣除部分 + 天數 = 總共天數&lt;/li&gt;
-&lt;li&gt;總共天數 mod 7 就知道星期幾了&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; months&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		String weeks&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Sunday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Monday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Tuesday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Wednesday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Thursday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Friday&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Saturday&amp;#34;&lt;/span&gt;};
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextInt&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; cases &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; cases; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; month &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; day &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sumDay &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;	
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; m &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; month &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; 1; m&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					sumDay &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; months&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;m&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				sumDay &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; day;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; weekIndex &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (sumDay &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 5) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 7;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(weeks&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;weekIndex&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10931 - Parity</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10931-parity/</link>
-        <pubDate>Wed, 25 Jun 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10931-parity/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10931---parity&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=onlinejudge&amp;amp;page=show_problem&amp;amp;problem=1872&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10931 - Parity&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;先將整數轉為二進制  &amp;mdash;&amp;ndash;&amp;gt; 利用 JAVA 的 Integer.toString() 方法&lt;/li&gt;
-&lt;li&gt;利用 for 迴圈搭配 charAt 逐一取出字串&lt;/li&gt;
-&lt;li&gt;如果是 1 ，加 1&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextInt&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#75715e&#34;&gt;// 數字轉換成二進制字串&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			String BinaryNumber &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Integer.&lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;(number,2);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;	&lt;span style=&#34;color:#75715e&#34;&gt;// 計算 1 個數&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; BinaryNumber.&lt;span style=&#34;color:#a6e22e&#34;&gt;length&lt;/span&gt;(); i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt; symbol &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BinaryNumber.&lt;span style=&#34;color:#a6e22e&#34;&gt;charAt&lt;/span&gt;(i);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(symbol &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;1&amp;#39;&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;The parity of &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; BinaryNumber &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; is &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; (mod 2).&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 100 - The 3n &#43; 1 problem</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-100-the-3n--1-problem/</link>
-        <pubDate>Mon, 23 Jun 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-100-the-3n--1-problem/</guid>
-        <description>&lt;h2 id=&#34;題目連結--100---the-3n--1-problem&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/external/1/100.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;100 - The 3n + 1 problem&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;將數字帶入演算法，算出數列中有幾個數字&lt;/li&gt;
-&lt;li&gt;前兩個數字是題目輸入的，第三個是數列有幾個數字&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextInt&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(n &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(n &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; m){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; temp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; m;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; temp;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; n; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; m; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1; &lt;span style=&#34;color:#75715e&#34;&gt;// 計算數列數字&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(number &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						number &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; 2;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						number &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 3 &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; number &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; max){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; count;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(max);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 11461 - Square Numbers</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/</link>
-        <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/</guid>
-        <description>&lt;h2 id=&#34;題目連結--11461---square-numbers&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=2456&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;11461 - Square Numbers&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;判斷平方樹有幾個&lt;/li&gt;
-&lt;li&gt;使用boolean方式去判斷&lt;/li&gt;
-&lt;li&gt;用陣列方式，把相乘起來地方標示 true&lt;/li&gt;
-&lt;li&gt;以下是解題關鍵 :&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/YKL07_1.png&#34;
-	width=&#34;403&#34;
-	height=&#34;73&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/YKL07_1_hu_1d7c5294a0b2a4d6.png 480w, https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/YKL07_1_hu_f2c433ce268be1db.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;552&#34;
-		data-flex-basis=&#34;1324px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/YKL07_2.png&#34;
-	width=&#34;754&#34;
-	height=&#34;246&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/YKL07_2_hu_c9d482e21451ffd4.png 480w, https://LiaoKuoCheng.github.io/p/uva-11461-square-numbers/YKL07_2_hu_fb7f46fd39b5121f.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;306&#34;
-		data-flex-basis=&#34;735px&#34;
-	
-&gt;&lt;/p&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; num &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 100001;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; tables&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;num&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1; i &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; num; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			tables&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; i&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNext&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(a &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; b ; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(tables&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;i&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					count &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}	
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(count);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10190 - Divide, But Not Quite Conquer!</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10190-divide-but-not-quite-conquer/</link>
-        <pubDate>Sun, 08 Jun 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10190-divide-but-not-quite-conquer/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10190---divide-but-not-quiter-conquer&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1131&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10190 - Divide, But NOt Quiter Conquer!&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;判斷 n 是否連續整除 m 到 1，可以印出整個過程&lt;/li&gt;
-&lt;li&gt;不能連續整除到 1 ， 印出 Boring!&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.ArrayList;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextLine&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(m &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Boring!&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; list &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Integer&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(n &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 1 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 0){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					list.&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;(n);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					n &lt;span style=&#34;color:#f92672&#34;&gt;/=&lt;/span&gt; m;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(n &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(Integer lists: list){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;						System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;print&lt;/span&gt;(lists &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				} &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Boring!&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 11150 - Cola</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-11150-cola/</link>
-        <pubDate>Thu, 05 Jun 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-11150-cola/</guid>
-        <description>&lt;h2 id=&#34;題目連結--11150---cola&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=2091&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;11150 - Cola&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;三瓶可換一瓶&lt;/li&gt;
-&lt;li&gt;如果你只有兩瓶，可以跟朋友借一瓶&lt;/li&gt;
-&lt;li&gt;印出喝了幾瓶&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextInt&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; now &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; drink &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; now;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(now &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;=&lt;/span&gt; 3){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; change &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; now &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; 3;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; nochange &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; now &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 3;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				drink &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; change;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				now &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; change &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; nochange;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(now &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 2){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				drink &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; 1;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(drink);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10071 - Back to High School Physics</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10071-back-to-high-school-physics/</link>
-        <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10071-back-to-high-school-physics/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10071---back-to-high-school-physics&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1012&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10071 - Back to High School Physics&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;單純考乘法運算&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextLong&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; c &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; b;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(c);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10055 - Hashmat the Brave Warrior</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10055-hashmat-the-brave-warrior/</link>
-        <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10055-hashmat-the-brave-warrior/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10055---hashmat-the-brave-warrior&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;page=show_problem&amp;amp;problem=996&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10055 - Hashmat the Brave Warrior&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;取出兩個數字&lt;/li&gt;
-&lt;li&gt;相減取絕對值&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt;(sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;hasNextLong&lt;/span&gt;()){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(Math.&lt;span style=&#34;color:#a6e22e&#34;&gt;abs&lt;/span&gt;(a &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; b));
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;} 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10783 - Odd Sum</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10783-odd-sum/</link>
-        <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10783-odd-sum/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10783---odd-sum&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1724&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10783 - Odd Sum&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;先取出範圍&lt;/li&gt;
-&lt;li&gt;將範圍內奇數數字相加起來&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; cases &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; cases; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; sum &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; a; j &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt;b; j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(j &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;					sum &lt;span style=&#34;color:#f92672&#34;&gt;+=&lt;/span&gt; j;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;				}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Case &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; sum);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
-        <title>UVA 10812 - Beat the Spread!</title>
-        <link>https://LiaoKuoCheng.github.io/p/uva-10812-beat-the-spread/</link>
-        <pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate>
-        
-        <guid>https://LiaoKuoCheng.github.io/p/uva-10812-beat-the-spread/</guid>
-        <description>&lt;h2 id=&#34;題目連結--10812---beat-the-spread&#34;&gt;題目連結 : &lt;a class=&#34;link&#34; href=&#34;https://onlinejudge.org/index.php?option=com_onlinejudge&amp;amp;Itemid=8&amp;amp;category=24&amp;amp;page=show_problem&amp;amp;problem=1753&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;10812 - Beat the Spread!&lt;/a&gt;
-&lt;/h2&gt;&lt;h2 id=&#34;解題思路&#34;&gt;解題思路
-&lt;/h2&gt;&lt;p&gt;其實就是在解此方程式：&lt;/p&gt;
-&lt;p&gt;x + y = a ，x - y = b&lt;/p&gt;
-&lt;p&gt;解為：x = (a + b)/2 ，y = (a - b)/2&lt;/p&gt;
-&lt;h2 id=&#34;參考解答java&#34;&gt;參考解答(JAVA)
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Scanner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(String args&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		Scanner sc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Scanner(System.&lt;span style=&#34;color:#a6e22e&#34;&gt;in&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; cases &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; cases; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; b &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sc.&lt;span style=&#34;color:#a6e22e&#34;&gt;nextInt&lt;/span&gt;();	
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; 2;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (a &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; b) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; 2;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 0 &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; y &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; 0 &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; (a &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; b) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; 2 &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; 1){
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;impossible&amp;#34;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}&lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			System.&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;(x &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; y);
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-        </item>
-        <item>
         <title>【日劇】黑色止血鉗 1 &amp; 2</title>
-        <link>https://LiaoKuoCheng.github.io/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/</link>
+        <link>http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/</link>
         <pubDate>Sat, 03 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://LiaoKuoCheng.github.io/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/</guid>
-        <description>&lt;img src="https://LiaoKuoCheng.github.io/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97%E5%8A%87%E7%85%A7.jpg" alt="Featured image of post 【日劇】黑色止血鉗 1 &amp; 2" /&gt;&lt;h2 id=&#34;黑色止血鉗-2-預告&#34;&gt;【黑色止血鉗 2 預告】
+        <guid>http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/</guid>
+        <description>&lt;img src="http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97%E5%8A%87%E7%85%A7.jpg" alt="Featured image of post 【日劇】黑色止血鉗 1 &amp; 2" /&gt;&lt;h2 id=&#34;黑色止血鉗-2-預告&#34;&gt;【黑色止血鉗 2 預告】
 &lt;/h2&gt;&lt;div class=&#34;video-wrapper&#34;&gt;
     &lt;iframe loading=&#34;lazy&#34; 
             src=&#34;https://www.youtube.com/embed/AHEqXtlxXmc&#34; 
@@ -1006,10 +191,10 @@
 &lt;/div&gt;
 
 &lt;h2 id=&#34;心得&#34;&gt;心得
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E5%91%BD%E9%81%8B.webp&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E5%91%BD%E9%81%8B.webp&#34;
 	width=&#34;1200&#34;
 	height=&#34;797&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E5%91%BD%E9%81%8B_hu_79f778fdd93b9ff2.webp 480w, https://LiaoKuoCheng.github.io/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E5%91%BD%E9%81%8B_hu_2af4d473d8b8602.webp 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E5%91%BD%E9%81%8B_hu_79f778fdd93b9ff2.webp 480w, http://localhost:1313/p/%E6%97%A5%E5%8A%87%E9%BB%91%E8%89%B2%E6%AD%A2%E8%A1%80%E9%89%97-1-2/%E5%91%BD%E9%81%8B_hu_2af4d473d8b8602.webp 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;命運轉盤&#34;
@@ -1049,10 +234,10 @@
         </item>
         <item>
         <title>About</title>
-        <link>https://LiaoKuoCheng.github.io/about/</link>
+        <link>http://localhost:1313/about/</link>
         <pubDate>Thu, 01 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>https://LiaoKuoCheng.github.io/about/</guid>
+        <guid>http://localhost:1313/about/</guid>
         <description>&lt;h2 id=&#34;簡單介紹&#34;&gt;簡單介紹
 &lt;/h2&gt;&lt;p&gt;哈囉，大家好，我是 廖國丞(Liao Kuo-Cheng ,Cheney)，歡迎來到我的個人網站。&lt;/p&gt;
 &lt;p&gt;我來自台中，畢業於國立勤益科技大學資訊工程系（2026年）。&lt;/p&gt;
@@ -1092,17 +277,17 @@
         </item>
         <item>
         <title>居家型健康檢測系統</title>
-        <link>https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/</link>
+        <link>http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/</link>
         <pubDate>Mon, 10 Jun 2024 00:00:00 +0000</pubDate>
         
-        <guid>https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/</guid>
+        <guid>http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/</guid>
         <description>&lt;h2 id=&#34;專題架構&#34;&gt;專題架構
 &lt;/h2&gt;&lt;h3 id=&#34;1-專題架構&#34;&gt;1. 專題架構
 &lt;/h3&gt;&lt;p&gt;使用 Laudon 資訊管理系統 Modle 繪製出整個架構&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96.png&#34;
 	width=&#34;1018&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96_hu_76df1e3c04a6d6a0.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96_hu_e6145154f7336dea.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96_hu_76df1e3c04a6d6a0.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%88%E9%A1%8C%E6%9E%B6%E6%A7%8B%E5%9C%96_hu_e6145154f7336dea.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Laudon 資訊管理系統 Modle&#34;
@@ -1130,10 +315,10 @@
 &lt;li&gt;電路轉換：利用 74HC14 施密特觸發器與 RC 電路串聯腰帶，將電容變化轉化為方波頻率。&lt;/li&gt;
 &lt;li&gt;量化採樣：MCU 透過外部中斷 (EXTI) 讀取上升緣，計算 0.2 秒內的充放電次數來量化呼吸深度。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29.png&#34;
 	width=&#34;687&#34;
 	height=&#34;160&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29_hu_9720b23b08d87e66.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29_hu_5ac0f8deb6e79b7c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29_hu_9720b23b08d87e66.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E4%B8%80%E8%88%AC%29_hu_5ac0f8deb6e79b7c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;導電銀布(一般)&#34;
@@ -1144,10 +329,10 @@
 		data-flex-basis=&#34;1030px&#34;
 	
 &gt;
-&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29.png&#34;
 	width=&#34;831&#34;
 	height=&#34;161&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29_hu_142d21afb951d7a4.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29_hu_ebb9678fe7852a9e.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29_hu_142d21afb951d7a4.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%B0%8E%E9%9B%BB%E9%8A%80%E5%B8%83%28%E6%8B%89%E6%89%AF%29_hu_ebb9678fe7852a9e.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;導電銀布(拉扯)&#34;
@@ -1158,10 +343,10 @@
 		data-flex-basis=&#34;1238px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1.png&#34;
 	width=&#34;638&#34;
 	height=&#34;417&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1_hu_e0c7c69f6d02f353.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1_hu_34f7eb01a4dfc7fb.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1_hu_e0c7c69f6d02f353.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/1_hu_34f7eb01a4dfc7fb.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;腰帶&#34;
@@ -1172,10 +357,10 @@
 		data-flex-basis=&#34;367px&#34;
 	
 &gt;
-&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2.png&#34;
 	width=&#34;613&#34;
 	height=&#34;561&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2_hu_dcef823ccc3eb539.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2_hu_92fe0d59ce09cd22.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2_hu_dcef823ccc3eb539.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/2_hu_92fe0d59ce09cd22.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;穿戴方式&#34;
@@ -1200,10 +385,10 @@
 &lt;li&gt;數據集建立：拍攝睡眠影片並裁切成一幀幀圖片，手動標註「正躺、左側躺、右側躺」三種標籤。&lt;/li&gt;
 &lt;li&gt;訓練集:使用250張圖像作為訓練集(每個動作各為250張)總共採集2550張，訓練集 680 張，測試集 170 張。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87.png&#34;
 	width=&#34;544&#34;
 	height=&#34;184&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87_hu_b4a659eae64758c6.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87_hu_586f64172fadaeb3.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87_hu_b4a659eae64758c6.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87_hu_586f64172fadaeb3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;訓練集圖片(包含正躺、左躺與右躺)&#34;
@@ -1216,10 +401,10 @@
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;訓練模型結果&#34;&gt;訓練模型結果
 &lt;/h4&gt;&lt;p&gt;模型能夠準確識別「正面」、「側面」和「右躺」三種動作。從精確度-召回率曲線圖中可見，所有類別的平均精確度達到0.992，顯示出模型在不同動作上的高精度和穩定性。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96.png&#34;
 	width=&#34;2250&#34;
 	height=&#34;1500&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96_hu_3ee5ce5c1b909ce2.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96_hu_1409fe43d2c00861.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96_hu_3ee5ce5c1b909ce2.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E8%A8%93%E7%B7%B4%E7%B5%90%E6%9E%9C%E5%9C%96_hu_1409fe43d2c00861.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;訓練結果圖&#34;
@@ -1230,10 +415,10 @@
 		data-flex-basis=&#34;360px&#34;
 	
 &gt;
-&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6.png&#34;
 	width=&#34;1920&#34;
 	height=&#34;1920&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6_hu_e600166eca10747.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6_hu_a6561a8a7c1d77c.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6_hu_e600166eca10747.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%A9%97%E8%AD%89%E9%9B%86%E6%B8%AC%E8%A9%A6%E6%BA%96%E7%A2%BA%E5%BA%A6_hu_a6561a8a7c1d77c.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;驗證集測試準確度&#34;
@@ -1266,10 +451,10 @@
 &lt;li&gt;疑似跌倒：影像偵測不到標籤（人離開畫面）且陀螺儀判斷為躺下。&lt;/li&gt;
 &lt;li&gt;久臥提醒：相同姿勢維持超過 1.5 小時，發送翻身提醒。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI.png&#34;
 	width=&#34;1271&#34;
 	height=&#34;466&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI_hu_1c7d5f87f39ade4f.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI_hu_ab0475b3f85df803.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI_hu_1c7d5f87f39ade4f.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/GUI_hu_ab0475b3f85df803.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;C# GUI&#34;
@@ -1281,10 +466,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;資料庫儲存&#34;&gt;資料庫儲存
-&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB.png&#34;
+&lt;/h4&gt;&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB.png&#34;
 	width=&#34;749&#34;
 	height=&#34;485&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB_hu_1190fa20589a5064.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB_hu_f0978ef11a7f430d.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB_hu_1190fa20589a5064.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%91%BC%E5%90%B8%E8%B3%87%E6%96%99%E5%BA%AB_hu_f0978ef11a7f430d.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;呼吸資料庫&#34;
@@ -1295,10 +480,10 @@
 		data-flex-basis=&#34;370px&#34;
 	
 &gt;
-&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB.png&#34;
 	width=&#34;1572&#34;
 	height=&#34;541&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB_hu_7527317c80995673.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB_hu_f958e7fbdba4f872.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB_hu_7527317c80995673.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E9%99%80%E8%9E%BA%E5%84%80%E8%B3%87%E6%96%99%E5%BA%AB_hu_f958e7fbdba4f872.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;陀螺儀&#34;
@@ -1309,10 +494,10 @@
 		data-flex-basis=&#34;697px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB.png&#34;
 	width=&#34;978&#34;
 	height=&#34;488&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB_hu_ccb8fe29abc254f0.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB_hu_54cc1015912781bc.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB_hu_ccb8fe29abc254f0.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%BD%B1%E5%83%8F%E8%BE%A8%E8%AD%98%E8%B3%87%E6%96%99%E5%BA%AB_hu_54cc1015912781bc.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;影像辨識資料庫&#34;
@@ -1323,10 +508,10 @@
 		data-flex-basis=&#34;480px&#34;
 	
 &gt;
-&lt;img src=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84.png&#34;
+&lt;img src=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84.png&#34;
 	width=&#34;380&#34;
 	height=&#34;309&#34;
-	srcset=&#34;https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84_hu_dc70bded905a0f37.png 480w, https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84_hu_a306ef3728cef875.png 1024w&#34;
+	srcset=&#34;http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84_hu_dc70bded905a0f37.png 480w, http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/%E5%A0%B1%E8%AD%A6%E8%A8%98%E9%8C%84_hu_a306ef3728cef875.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;報警記錄&#34;
@@ -1374,18 +559,18 @@
         </item>
         <item>
         <title>Archives</title>
-        <link>https://LiaoKuoCheng.github.io/archives/</link>
+        <link>http://localhost:1313/archives/</link>
         <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
         
-        <guid>https://LiaoKuoCheng.github.io/archives/</guid>
+        <guid>http://localhost:1313/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>Search</title>
-        <link>https://LiaoKuoCheng.github.io/search/</link>
+        <link>http://localhost:1313/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://LiaoKuoCheng.github.io/search/</guid>
+        <guid>http://localhost:1313/search/</guid>
         <description></description>
         </item>
         
