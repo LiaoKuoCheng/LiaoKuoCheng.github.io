@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-tw" dir="ltr">
-    <head><meta charset='utf-8'>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"><meta name='description' content="大學專題">
 <title>居家型健康檢測系統</title>
 
-<link rel='canonical' href='https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/'>
+<link rel='canonical' href='http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="居家型健康檢測系統">
 <meta property='og:description' content="大學專題">
-<meta property='og:url' content='https://LiaoKuoCheng.github.io/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/'>
+<meta property='og:url' content='http://localhost:1313/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/'>
 <meta property='og:site_name' content='Cheney&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='STM32' /><meta property='article:tag' content='YoloV8' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='C#' /><meta property='article:published_time' content='2024-06-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2024-06-10T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="居家型健康檢測系統">
@@ -453,7 +453,7 @@
 </h4><ul>
 <li>模型選用：採用 最新版 YOLOv8n 模型。</li>
 <li>數據集建立：拍攝睡眠影片並裁切成一幀幀圖片，手動標註「正躺、左側躺、右側躺」三種標籤。</li>
-<li>訓練集:使用250張圖像作為訓練集(每個動作各為250張)總共採集2550張，訓練集 680 張，測試集 170 張。</li>
+<li>訓練集:總共採集2550張，一個姿態 850 張，訓練集 2040 張，測試集 510 張 ( 8 : 2 )。</li>
 </ul>
 <p><img src="/p/%E5%B1%85%E5%AE%B6%E5%9E%8B%E5%81%A5%E5%BA%B7%E6%AA%A2%E6%B8%AC%E7%B3%BB%E7%B5%B1/yolo%E6%A8%99%E8%A8%98%E5%9C%96%E7%89%87.png"
 	width="544"
@@ -799,7 +799,7 @@
                 src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
                 
                 >
-            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+            </script><script type="text/javascript" src="/ts/main.73f3d6635cf85c68ab24ef6c1aa8e1e528128ca562ba8d3fe00dadba08519a7a.js" defer></script>
 <script>
     (function () {
         const customFont = document.createElement('link');
